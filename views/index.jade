@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1 Fullbloods
+  section#shows
+    .content
+      h2.title Shows
+      for event in events
+        .show
+          .date= event.start
+          .venue 
+            |at 
+            if event.url
+              a(href=event.url.val)= event.summary
+            else
+              = event.summary
+          .description= event.description
+  section#tunes
+    .content
+      h2.title Tunes
+      ul
+        li
+          a(href="https://www.rdio.com/artist/Fullbloods/") Rdio
+        li
+          a(href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw") Spotify
+        li
+          a(href="https://itunes.apple.com/us/artist/fullbloods/id553368622") iTunes
+  section#stuff
+    .content
+      h2.title Stuff
+      ul
+        li
+          a(href="https://www.facebook.com/fullbloods") Facebook
+        li
+          a(href="https://twitter.com/fullbloods") Twitter

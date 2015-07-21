@@ -23,10 +23,10 @@ drawer = {
   canvas: null,
   ctx: null,
   setupCanvas: function() {
-    bd = document.body.getClientRects()[0]
+    bd = document.body.getBoundingClientRect();
     this.canvas = document.getElementById('drawCanvas');
     this.canvas.setAttribute('width', bd.width);
-    this.canvas.setAttribute('height', bd.height);
+    this.canvas.setAttribute('height', bd.height - 50);
     this.ctx = this.canvas.getContext('2d');
     this.ctx.lineWidth = 1;
     document.body.addEventListener('mousemove', this.draw.bind(this));
@@ -47,8 +47,8 @@ drawer = {
         }
         i++;
       }
-      // this.ctx.closePath();
       this.ctx.stroke();
+      this.ctx.closePath();
     }
   },
   draw: function(e) {
@@ -83,4 +83,8 @@ drawer = {
 
 };
 
-drawer.setupCanvas()
+window.onload = function() {
+  if (!window.matchMedia("only screen and (max-width: 760px)").matches) {
+    drawer.setupCanvas();
+  }
+}

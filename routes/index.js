@@ -4,6 +4,7 @@ var calConfig = require('../lib/calConfig');
 var ical = require('ical');
 var moment = require('moment');
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   events = [];
@@ -15,17 +16,21 @@ router.get('/', function(req, res, next) {
         if (data.hasOwnProperty(k)) {
           var ev = data[k]
           if (ev.type == 'VEVENT') {
+            date = moment(ev.start.toJSON());
             if (
-              moment(ev.start).isAfter(moment(), 'days') ||
-              moment(ev.start).isSame(moment(), 'days')
+              date.isAfter(moment(), 'days') ||
+              date.isSame(moment(), 'days')
             ) {
-              ev.start = moment(ev.start).format('M/D h:mm a');
+              ev.start = date.format('M/D h:mm a');
               events.push(ev);
             }
           }
         }
       };
     };
+    events.sort(function(a,b) {
+      return moment(a.start).isAfter(b.start);
+    });
     res.render('index', {events: events});
   });
 });

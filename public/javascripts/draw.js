@@ -26,7 +26,7 @@ drawer = {
     bd = document.body.getBoundingClientRect();
     this.canvas = document.getElementById('drawCanvas');
     this.canvas.setAttribute('width', bd.width);
-    this.canvas.setAttribute('height', bd.height - 50);
+    this.canvas.setAttribute('height', bd.height + 50);
     this.ctx = this.canvas.getContext('2d');
     this.ctx.lineWidth = 1;
     document.body.addEventListener('mousemove', this.draw.bind(this));
@@ -38,7 +38,7 @@ drawer = {
       // this.ctx.moveTo(plots[0].x, plots[0].y);
       i = 1;
       while (i < plots.length) {
-        this.ctx.strokeStyle = '#40208c';
+        this.ctx.strokeStyle = '#6a3eb9';
         var points = this.calcShapePos(plots, i);
         var pi = 0;
         while (pi < points.length) {

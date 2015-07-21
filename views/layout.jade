@@ -11,9 +11,11 @@ html
     link(href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    canvas#drawCanvas(width=580 height=300)
     section#main
       block content
-
+  
+  script(src='javascripts/draw.js')
   :js
     <script type="text/javascript">
     var _gauges = _gauges || [];

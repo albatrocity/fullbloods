@@ -44,6 +44,8 @@ body {
   max-width: 800px;
   min-width: 300px;
   margin: 1em auto;
+  z-index: 20;
+  position: relative;
 }
 
 section .content .title {
@@ -88,6 +90,11 @@ section .content .title:before {
 
 #stuff {
   padding-bottom: 1em;
+}
+
+#drawCanvas {
+  position: absolute;
+  z-index: 0;
 }
 
 ul {

@@ -25,11 +25,12 @@ drawer = {
   setupCanvas: function() {
     bd = document.body.getBoundingClientRect();
     this.canvas = document.getElementById('drawCanvas');
-    this.canvas.setAttribute('width', bd.width);
-    this.canvas.setAttribute('height', bd.height + 50);
+    this.resizeCanvas()
     this.ctx = this.canvas.getContext('2d');
     this.ctx.lineWidth = 1;
     document.body.addEventListener('mousemove', this.draw.bind(this));
+    document.body.addEventListener('touchmove', this.draw.bind(this));
+    window.addEventListener('resize', this.resizeCanvas.bind(this), true)
   },
   drawOnCanvas: function(plots) {
     var i;
@@ -79,12 +80,14 @@ drawer = {
 
     points.push(top); points.push(right); points.push(left);
     return points;
+  },
+  resizeCanvas: function() {
+    this.canvas.setAttribute('width', bd.width);
+    this.canvas.setAttribute('height', bd.height + 50);
   }
 
 };
 
 window.onload = function() {
-  if (!window.matchMedia("only screen and (max-width: 760px)").matches) {
-    drawer.setupCanvas();
-  }
+  drawer.setupCanvas();
 }

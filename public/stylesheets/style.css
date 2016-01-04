@@ -1,7 +1,7 @@
 /*Type*/
 h1 {
   font-size: 240%;
-  color: #ddb407;
+  color: #d6c84d;
   font-weight: normal;
 }
 
@@ -16,14 +16,14 @@ h1, h2, h3, h4 {
 html {
   margin: 0;
   padding: 0;
-  background: #5d31ad; /* Old browsers */
-  /*background: -moz-linear-gradient(top,  #5d31ad 0%, #40208c 100%); /* FF3.6+ */*/
-  /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5d31ad), color-stop(100%,#40208c)); /* Chrome,Safari4+ */*/
-  /*background: -webkit-linear-gradient(top,  #5d31ad 0%,#40208c 100%); /* Chrome10+,Safari5.1+ */*/
-  /*background: -o-linear-gradient(top,  #5d31ad 0%,#40208c 100%); /* Opera 11.10+ */*/
-  /*background: -ms-linear-gradient(top,  #5d31ad 0%,#40208c 100%); /* IE10+ */*/
-  /*background: linear-gradient(to bottom,  #5d31ad 0%,#40208c 100%); /* W3C */*/
-  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d31ad', endColorstr='#40208c',GradientType=0 ); /* IE6-9 */*/
+  background: #40208c; /* Old browsers */
+  /*background: -moz-linear-gradient(top,  #40208c 0%, #40208c 100%); /* FF3.6+ */*/
+  /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#40208c), color-stop(100%,#40208c)); /* Chrome,Safari4+ */*/
+  /*background: -webkit-linear-gradient(top,  #40208c 0%,#40208c 100%); /* Chrome10+,Safari5.1+ */*/
+  /*background: -o-linear-gradient(top,  #40208c 0%,#40208c 100%); /* Opera 11.10+ */*/
+  /*background: -ms-linear-gradient(top,  #40208c 0%,#40208c 100%); /* IE10+ */*/
+  /*background: linear-gradient(to bottom,  #40208c 0%,#40208c 100%); /* W3C */*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40208c', endColorstr='#40208c',GradientType=0 ); /* IE6-9 */*/
   /*background-position: fixed;*/
   /*background-size: cover;*/
 }
@@ -37,7 +37,7 @@ body {
   color: #e6dbfb;
   -webkit-font-smoothing: antialiased;
 
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5d31ad+0,40208c+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40208c+0,40208c+100 */
 }
 
 #main {
@@ -56,6 +56,12 @@ section .content .title {
 section .content .title:before {
   content: "# ";
   margin-left: -1em;
+}
+
+.content img {
+  max-width: 100%;
+  border: .2em solid #1e0e44;
+  display: block;
 }
 
 #shows .show {

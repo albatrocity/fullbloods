@@ -2,6 +2,17 @@ extends layout
 
 block content
   h1 Fullbloods
+  section#mild_west
+    .content
+      h2.title Mild West
+      a(href="http://highdiverecords.com/?band=fullbloods")
+        img(src='/images/mild_west_cover.jpg')
+      p 
+        | Our newest full-length release, available on 
+        a(href="http://highdiverecords.com/?band=fullbloods") High Dive Records
+        |.
+      
+      
   section#shows
     .content
       h2.title Shows
@@ -18,12 +29,9 @@ block content
   section#tunes
     .content
       h2.title Tunes
-      em *
-        a(href="https://soundcloud.com/high-dive/fullbloods-new-generation") new stuff
-        |  coming soon*
+      p
+        iframe(width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/194428348&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true")
       ul
-        li
-          a(href="https://www.rdio.com/artist/Fullbloods/") Rdio
         li
           a(href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw") Spotify
         li

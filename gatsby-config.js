@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Fullbloods',
     description: 'A song-playing band from Kansas City',
+    author: '@fullbloods',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -1,0 +1,112 @@
+/*Type*/
+h1 {
+  font-size: 240%;
+  color: #d6c84d;
+  font-weight: normal;
+}
+
+a {
+  color: #e6dbfb;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background: #40208c;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  pading: 0;
+  font-family: 'Ubuntu Mono';
+  font-size: 18px;
+  color: #e6dbfb;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  width: 50%;
+  max-width: 800px;
+  min-width: 300px;
+  margin: 1em auto;
+  z-index: 20;
+  position: relative;
+}
+
+section .content .title {
+  /*color: #2d7cf4;*/
+}
+
+section .content .title:before {
+  content: '# ';
+  margin-left: -1em;
+}
+
+.content img {
+  max-width: 100%;
+  display: block;
+}
+
+#shows .show {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #2f6fd0;
+}
+
+#shows .show .date,
+#shows .show .venue {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  font-size: 120%;
+}
+
+#shows .show .date {
+  font-weight: bold;
+}
+#shows .venue {
+  padding-left: 0.6em;
+}
+@media (max-width: 800px) {
+  #shows .show .venue {
+    display: block;
+    padding-top: 0.3em;
+  }
+}
+
+#shows .show .description {
+  padding-top: 0.6em;
+  font-size: 80%;
+}
+
+#stuff {
+  padding-bottom: 1em;
+}
+
+#drawCanvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+#imgBuff {
+  /*display: none;*/
+}
+
+#photo img {
+  max-width: 100%;
+  border: 0.2em solid #1e0e44;
+}
+
+ul {
+  line-height: 1.6em;
+}

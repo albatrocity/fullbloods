@@ -24,16 +24,6 @@ const IndexPage = () => (
         </p>
       </div>
     </section>
-    //{' '}
-    <section id="shows">
-      //{' '}
-      <div className="content">
-        // <h2 className="title">Shows</h2>
-        // <Shows />
-        //{' '}
-      </div>
-      //{' '}
-    </section>
     <section id="tunes">
       <div className="content">
         <h2 className="title">Tunes</h2>

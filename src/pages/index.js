@@ -24,11 +24,15 @@ const IndexPage = () => (
         </p>
       </div>
     </section>
+    //{' '}
     <section id="shows">
+      //{' '}
       <div className="content">
-        <h2 className="title">Shows</h2>
-        <Shows />
+        // <h2 className="title">Shows</h2>
+        // <Shows />
+        //{' '}
       </div>
+      //{' '}
     </section>
     <section id="tunes">
       <div className="content">
@@ -64,7 +68,6 @@ const IndexPage = () => (
         </ul>
       </div>
     </section>
-
     <section id="stuff">
       <p>
         Here's a{' '}

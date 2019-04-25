@@ -110,3 +110,7 @@ section .content .title:before {
 ul {
   line-height: 1.6em;
 }
+
+.list_item-show {
+  border-bottom: 1px solid red;
+}

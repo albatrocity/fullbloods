@@ -13,7 +13,7 @@ const IndexPage = () => (
     <section id="mild_west">
       <div className="content">
         <h2 className="title">Mild West</h2>
-        <a href="http://highdiverecords.com/?album=mild-west-by-fullbloods">
+        <a href="http://www.highdivekc.com/albums/mild-west-by-fullbloods/">
           <AlbumCover />
         </a>
         <p>
@@ -22,6 +22,12 @@ const IndexPage = () => (
             High Dive Records
           </a>
         </p>
+      </div>
+    </section>
+    <section id="shows">
+      <div className="content">
+        <h2 className="title">Shows</h2>
+        <Shows />
       </div>
     </section>
     <section id="tunes">

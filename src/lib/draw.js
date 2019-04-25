@@ -19,7 +19,6 @@ const drawer = {
   canvas: null,
   ctx: null,
   setupCanvas: function(canvas) {
-    console.log('canvas', canvas)
     this.canvas = canvas
     this.resizeCanvas()
     this.ctx = this.canvas.getContext('2d')
@@ -80,8 +79,6 @@ const drawer = {
   },
   resizeCanvas: function() {
     const bd = document.body.getBoundingClientRect()
-    console.log(this)
-    console.log(this.canvas)
     this.canvas.setAttribute('width', bd.width)
     this.canvas.setAttribute('height', bd.height + 50)
   },

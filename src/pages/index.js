@@ -5,25 +5,12 @@ import Layout from '../components/layout'
 import AlbumCover from '../components/AlbumCover'
 import Shows from '../components/Shows'
 import SEO from '../components/seo'
+import Logo from '../components/Logo'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} />
-    <h1>Fullbloods</h1>
-    <section id="mild_west">
-      <div className="content">
-        <h2 className="title">Mild West</h2>
-        <a href="http://www.highdivekc.com/albums/mild-west-by-fullbloods/">
-          <AlbumCover />
-        </a>
-        <p>
-          2016's release. Analog and digital formats available from{' '}
-          <a href="http://www.highdivekc.com/albums/mild-west-by-fullbloods/">
-            High Dive Records
-          </a>
-        </p>
-      </div>
-    </section>
+
     <section id="shows">
       <div className="content">
         <h2 className="title">Shows</h2>

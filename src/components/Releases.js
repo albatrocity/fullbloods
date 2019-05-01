@@ -1,40 +1,46 @@
 import React from 'react'
-import Release from './Release'
-
+import { useStaticQuery, graphql } from 'gatsby'
 import { Box } from 'grommet'
 
-const releases = [
-  {
-    title: 'Soft and Virtual Touch',
-    image: 'svt',
-    info: '/soft-and-virtual-touch',
-    buy: '',
-    date: '8/1/19',
-    spotify: '',
-    apm: '',
-    youtube: null,
-    bandcamp: null,
-  },
-  {
-    title: 'Mild West',
-    image: 'mild_west',
-    info: '/mild-west',
-    buy: 'http://www.highdivekc.com/albums/mild-west-by-fullbloods/',
-    date: '3/1/16',
-    spotify:
-      'https://open.spotify.com/album/6DFuYDgGPtosCXaRwcwJFc?si=ll_lBk18RVyAhpnalhzybg',
-    apm: 'https://itunes.apple.com/us/album/mild-west/1072624551',
-    youtube: null,
-    bandcamp: 'http://fullbloods.bandcamp.com/album/mild-west',
-  },
-]
+import Release from './Release'
 
-const Releases = () => (
-  <Box direction="row-responsive" gap="small" justify="between">
-    {releases.map(x => (
-      <Release key={x.title} {...x} />
-    ))}
-  </Box>
-)
+const Releases = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/releases/" } }
+        sort: { fields: [frontmatter___release_date], order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              release_date
+              spotify
+              apm
+              bandcamp
+              buy
+              image
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  const releases = data.allMarkdownRemark.edges.map(x => x.node)
+  return (
+    <Box direction="row-responsive" gap="small" justify="between">
+      {releases.map(x => (
+        <Release
+          key={x.id}
+          {...Object.assign(x.frontmatter, { body: x.html })}
+        />
+      ))}
+    </Box>
+  )
+}
 
 export default Releases

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Box } from 'grommet'
 
 import TrackDetails from './TrackDetails'

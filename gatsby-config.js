@@ -9,11 +9,18 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-plugin-transition-link',
+      options: {
+        layout: require.resolve(`./src/components/Layout.js`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     'gatsby-transformer-sharp',
@@ -32,8 +39,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Ubuntu Mono`,
-            variants: [`400`, `700`, `400i`, `700i`],
+            family: `Nunito`,
+            variants: [`300`, `700`, `300i`, `700i`],
             formats: ['woff', 'woff2'],
           },
         ],

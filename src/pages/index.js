@@ -1,56 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import AlbumCover from '../components/AlbumCover'
-import Shows from '../components/Shows'
 import SEO from '../components/seo'
-import Logo from '../components/Logo'
+import Page from '../components/Page'
 
 const IndexPage = () => (
-  <Layout>
+  <Page>
     <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} />
 
-    <section id="shows">
-      <div className="content">
-        <h2 className="title">Shows</h2>
-        <Shows />
-      </div>
-    </section>
-    <section id="tunes">
-      <div className="content">
-        <h2 className="title">Tunes</h2>
-        <p>
-          <iframe
-            width="100%"
-            height="450"
-            scrolling="no"
-            frameBorder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/86662207&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false"
-          />
-        </p>
-        <h4>EIGHT ONE SIXTY in-studio session</h4>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/36XKO9bXv-Q"
-          frameBorder="0"
-          allowFullScreen="allowfullscreen"
-        />
-        <ul>
-          <li>
-            <a href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw">
-              Spotify
-            </a>
-          </li>
-          <li>
-            <a href="https://itunes.apple.com/us/artist/fullbloods/id553368622">
-              iTunes
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
     <section id="stuff">
       <p>
         Here's a{' '}
@@ -80,7 +37,7 @@ const IndexPage = () => (
         </li>
       </ul>
     </section>
-  </Layout>
+  </Page>
 )
 
 export default IndexPage

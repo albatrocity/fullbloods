@@ -8,14 +8,14 @@ const BackgroundSection = ({ className, children, layout }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "svt_bg_side.jpg" }) {
+        desktop: file(relativePath: { eq: "images/svt_bg_side.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
-        mobile: file(relativePath: { eq: "svt_bg_bottom.jpg" }) {
+        mobile: file(relativePath: { eq: "images/svt_bg_bottom.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp

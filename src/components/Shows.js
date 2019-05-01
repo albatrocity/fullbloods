@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+import { Heading } from 'grommet'
 import ListItemShow from './ListItemShow'
 
 const CALENDAR_ADDRESS =
@@ -19,6 +20,7 @@ const Shows = () => {
 
   return (
     <>
+      <Heading>Shows</Heading>
       {data.events.length ? (
         data.events.map(x => <ListItemShow {...x} key={x.created} />)
       ) : (

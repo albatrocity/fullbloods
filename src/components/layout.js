@@ -14,6 +14,7 @@ import {
 } from 'grommet'
 import BackgroundSection from './BackgroundSection'
 import Header from './Header'
+import theme from '../lib/theme'
 
 import './layout.css'
 
@@ -30,7 +31,7 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <Grommet>
+        <Grommet theme={theme}>
           <ResponsiveContext.Consumer>
             {size => {
               const layout = size === 'small' ? 'mobile' : 'desktop'
@@ -55,7 +56,7 @@ const Layout = ({ children }) => {
                     </BackgroundSection>
                   </Box>
                   <Box flex id="main" overflow="auto" fill>
-                    <Box pad={{ vertical: 'small', horizontal: 'medium' }}>
+                    <Box pad={{ vertical: 'none', horizontal: 'medium' }}>
                       {children}
                     </Box>
                   </Box>

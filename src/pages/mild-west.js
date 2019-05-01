@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
+import StyledLink from '../components/StyledLink'
 import Layout from '../components/layout'
 import AlbumCover from '../components/AlbumCover'
 import AlbumLyrics from '../components/AlbumLyrics'
@@ -39,7 +40,7 @@ const IndexPage = () => {
   return (
     <Page>
       <SEO title="Mild West" keywords={['music', 'band', 'kansas city']} />
-      <Link to="/music">Back to Music</Link>
+      <StyledLink to="/music">Back to Music</StyledLink>
       <Heading margin={{ bottom: 'none' }}>Mild West</Heading>
       <Text margin={{ bottom: 'medium' }} level={4}>
         Released March 1, 2016

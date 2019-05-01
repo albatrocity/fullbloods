@@ -10,7 +10,7 @@ import { Heading } from 'grommet'
 
 const IndexPage = () => (
   <Page>
-    <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} />
+    <SEO title="Music" keywords={['music', 'band', 'kansas city']} />
     <Heading>Music</Heading>
     <Releases />
 

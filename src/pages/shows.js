@@ -8,7 +8,7 @@ import Page from '../components/Page'
 
 const IndexPage = () => (
   <Page>
-    <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} />
+    <SEO title="Shows" keywords={['music', 'band', 'kansas city']} />
 
     <Shows />
   </Page>

@@ -1,7 +1,6 @@
-import { Link } from 'gatsby'
+import StyledLink from './StyledLink'
 import PropTypes from 'prop-types'
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { Box, Anchor } from 'grommet'
 import Logo from './Logo'
 
@@ -14,15 +13,13 @@ const Header = ({ siteTitle, layout }) => (
     align="center"
     alignContent="center"
   >
-    <Link swipe direction="down" to="/">
+    <StyledLink swipe direction="down" to="/">
       <Logo />
-    </Link>
+    </StyledLink>
     <nav>
       <Box direction={layout === 'mobile' ? 'row' : 'column'} gap="small">
-        <Link as={Anchor} to="/music">
-          Music
-        </Link>
-        <Link to="/shows">Shows</Link>
+        <StyledLink to="/music">Music</StyledLink>
+        <StyledLink to="/shows">Shows</StyledLink>
       </Box>
     </nav>
   </Box>

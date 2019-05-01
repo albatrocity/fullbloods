@@ -8,7 +8,10 @@ const Releases = () => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/releases/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/releases/" }
+          frontmatter: { published: { eq: true } }
+        }
         sort: { fields: [frontmatter___release_date], order: DESC }
       ) {
         edges {

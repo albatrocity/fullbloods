@@ -13,7 +13,7 @@ const Header = ({ siteTitle, layout }) => (
     align="center"
     alignContent="center"
   >
-    <StyledLink swipe direction="down" to="/">
+    <StyledLink direction="down" to="/">
       <Logo />
     </StyledLink>
     <nav>

@@ -13,63 +13,27 @@ import Page from '../components/Page'
 
 import { Heading, Box, Text, Paragraph, Anchor } from 'grommet'
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      lyrics: allMarkdownRemark(
-        filter: { frontmatter: { album: { eq: "Mild West" } } }
-        sort: { fields: [frontmatter___track], order: ASC }
-      ) {
-        edges {
-          node {
-            id
-            htmlAst
-            frontmatter {
-              title
-              track
-              credits {
-                name
-                role
-              }
-            }
-          }
-        }
-      }
-      album: allMarkdownRemark(
-        filter: { frontmatter: { title: { eq: "Mild West" } } }
-      ) {
-        edges {
-          node {
-            htmlAst
-            frontmatter {
-              title
-              image
-              release_date
-              apm
-              bandcamp
-              spotify
-              buy
-              slug
-              soundcloud_embed
-            }
-          }
-        }
-      }
-    }
-  `)
+const ReleaseTemplate = ({ data }) => {
   const lyrics = data.lyrics.edges.map(x => x.node)
   const album = data.album.edges.map(x => x.node)[0]
 
+  console.log('IMAGE', album.frontmatter.image)
+
   return (
     <Page>
-      <SEO title="Mild West" keywords={['music', 'band', 'kansas city']} />
+      <SEO
+        title={album.frontmatter.title}
+        keywords={['music', 'band', 'kansas city']}
+      />
       <StyledLink to="/music">Back to Music</StyledLink>
       <Heading margin={{ bottom: 'none' }}>{album.frontmatter.title}</Heading>
       <Text margin={{ bottom: 'medium' }} level={4}>
         {format(new Date(album.frontmatter.release_date), 'MMMM Do, YYYY')}
       </Text>
 
-      <AlbumCover image={album.frontmatter.image} />
+      {album.frontmatter.image && (
+        <AlbumCover image={album.frontmatter.image} />
+      )}
 
       <ListenLinks
         spotify={album.frontmatter.spotify}
@@ -103,4 +67,54 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default ReleaseTemplate
+
+export const pageQuery = graphql`
+  query WorkPostByID($title: String!) {
+    lyrics: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/lyrics/" }
+        frontmatter: { album: { eq: $title } }
+      }
+      sort: { fields: [frontmatter___track], order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          htmlAst
+          frontmatter {
+            title
+            track
+            credits {
+              name
+              role
+            }
+          }
+        }
+      }
+    }
+    album: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/releases/" }
+        frontmatter: { title: { eq: $title } }
+      }
+    ) {
+      edges {
+        node {
+          htmlAst
+          frontmatter {
+            title
+            image
+            release_date
+            apm
+            bandcamp
+            spotify
+            buy
+            slug
+            soundcloud_embed
+          }
+        }
+      }
+    }
+  }
+`

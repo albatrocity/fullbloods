@@ -1,7 +1,7 @@
 ---
 title: 'Mild West'
 image: mild_west
-slug: mild-west
+slug: music/mild-west
 release_date: 2016-03-01T16:13:56.929Z
 spotify: https://open.spotify.com/album/6DFuYDgGPtosCXaRwcwJFc?si=ll_lBk18RVyAhpnalhzybg
 buy: http://www.highdivekc.com/albums/mild-west-by-fullbloods/
@@ -9,6 +9,7 @@ apm: https://itunes.apple.com/us/album/mild-west/1072624551
 youtube:
 bandcamp: http://fullbloods.bandcamp.com/album/mild-west
 soundcloud_embed: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/86662207&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false
+published: true
 ---
 
 Engineered by Mike Nolte at [Westend Studios](http://westendstudio.com) in Kansas City, Kansas.  

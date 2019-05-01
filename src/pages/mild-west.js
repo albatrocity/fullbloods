@@ -101,7 +101,7 @@ const IndexPage = () => {
         </Text>
         <br />
         <Text>
-          Special thanks to Jerad Tomasino, Mike Nolte, David Seume, The ACBS,
+          Special thanks to Jerad Tomasino, Mike Nolte, David Seume, The ACBs,
           and friends + families
         </Text>
         <br />

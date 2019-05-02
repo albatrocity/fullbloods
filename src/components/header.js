@@ -1,28 +1,82 @@
 import StyledLink from './StyledLink'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box, Anchor } from 'grommet'
+import { Box, Text, Anchor } from 'grommet'
+import { FaInstagram, FaTwitter, FaBandcamp } from 'react-icons/fa'
 import Logo from './Logo'
 
+import styled from 'styled-components'
+
+const SizedLink = styled(StyledLink)`
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+`
+
+const StyledBox = styled(Box)`
+  max-width: 400px;
+  @media (max-width: 768px) {
+    min-height: 110px;
+  }
+`
+
 const Header = ({ siteTitle, layout }) => (
-  <Box
+  <StyledBox
     flex="grow"
     fill
-    style={{ maxWidth: '400px' }}
     margin={{ horizontal: 'auto', vertical: 'small' }}
     align="center"
     alignContent="center"
   >
-    <StyledLink direction="down" to="/">
+    <SizedLink to="/">
       <Logo />
-    </StyledLink>
+    </SizedLink>
     <nav>
-      <Box direction={layout === 'mobile' ? 'row' : 'column'} gap="small">
-        <StyledLink to="/music">Music</StyledLink>
-        <StyledLink to="/shows">Shows</StyledLink>
+      <Box
+        direction={layout === 'mobile' ? 'row' : 'column'}
+        gap="small"
+        align="center"
+      >
+        <Text size="large">
+          <StyledLink theme="light" to="/music">
+            Music
+          </StyledLink>
+        </Text>
+        <Text size="large">
+          <StyledLink theme="light" to="/shows">
+            Shows
+          </StyledLink>
+        </Text>
+        <Text size="large">
+          <Anchor
+            color="#fff"
+            weight="100"
+            href="https://fullbloods.bandcamp.com"
+          >
+            <FaBandcamp />
+          </Anchor>
+        </Text>
+        <Text size="large">
+          <Anchor
+            color="#fff"
+            weight="100"
+            href="https://www.instagram.com/fullbloods.mp3/"
+          >
+            <FaInstagram />
+          </Anchor>
+        </Text>
+        <Text size="large">
+          <Anchor
+            color="#fff"
+            weight="100"
+            href="https://www.twitter.com/fullbloods/"
+          >
+            <FaTwitter />
+          </Anchor>
+        </Text>
       </Box>
     </nav>
-  </Box>
+  </StyledBox>
 )
 
 Header.propTypes = {

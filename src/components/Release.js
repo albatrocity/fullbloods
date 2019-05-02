@@ -18,7 +18,7 @@ const Release = ({
   slug,
 }) => (
   <Box basis="50%">
-    <Link swipe direction="left" to={`/${slug}`}>
+    <Link direction="left" to={`/${slug}`}>
       <AlbumCover image={image} />
     </Link>
     <Box pad={{ vertical: 'small' }}>

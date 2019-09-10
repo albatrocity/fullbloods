@@ -1,13 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box } from 'grommet'
 
-const PageBox = styled(Box)`
-  background-color: #edebe4;
-`
+import Layout from './Layout'
 
 const Page = ({ children }) => (
-  <PageBox pad={{ vertical: 'small' }}>{children}</PageBox>
+  <Layout pad={{ vertical: 'small' }}>{children}</Layout>
 )
 
 export default Page

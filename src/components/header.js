@@ -2,7 +2,13 @@ import StyledLink from './StyledLink'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box, Text, Anchor } from 'grommet'
-import { FaInstagram, FaTwitter, FaBandcamp } from 'react-icons/fa'
+import {
+  FaInstagram,
+  FaTwitter,
+  FaBandcamp,
+  FaFacebook,
+  FaSpotify,
+} from 'react-icons/fa'
 import Logo from './Logo'
 
 import styled from 'styled-components'
@@ -25,6 +31,7 @@ const Header = ({ siteTitle, layout }) => (
     flex="grow"
     fill
     margin={{ horizontal: 'auto', vertical: 'small' }}
+    pad="medium"
     align="center"
     alignContent="center"
   >
@@ -38,39 +45,36 @@ const Header = ({ siteTitle, layout }) => (
         align="center"
       >
         <Text size="large">
-          <StyledLink theme="light" to="/music">
-            Music
-          </StyledLink>
+          <StyledLink to="/music">Music</StyledLink>
         </Text>
         <Text size="large">
-          <StyledLink theme="light" to="/shows">
-            Shows
-          </StyledLink>
+          <StyledLink to="/shows">Shows</StyledLink>
         </Text>
         <Text size="large">
-          <Anchor
-            color="#fff"
-            weight="100"
-            href="https://fullbloods.bandcamp.com"
-          >
+          <Anchor weight="100" href="https://fullbloods.bandcamp.com">
             <FaBandcamp />
           </Anchor>
         </Text>
         <Text size="large">
           <Anchor
-            color="#fff"
             weight="100"
-            href="https://www.instagram.com/fullbloods.mp3/"
+            href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw"
           >
+            <FaSpotify />
+          </Anchor>
+        </Text>
+        <Text size="large">
+          <Anchor weight="100" href="https://www.instagram.com/fullbloods.mp3/">
             <FaInstagram />
           </Anchor>
         </Text>
         <Text size="large">
-          <Anchor
-            color="#fff"
-            weight="100"
-            href="https://www.twitter.com/fullbloods/"
-          >
+          <Anchor weight="100" href="https://www.facebook.com/fullbloods/">
+            <FaFacebook />
+          </Anchor>
+        </Text>
+        <Text size="large">
+          <Anchor weight="100" href="https://www.twitter.com/fullbloods/">
             <FaTwitter />
           </Anchor>
         </Text>

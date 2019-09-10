@@ -14,7 +14,6 @@ import Img from 'gatsby-image'
  */
 
 const AlbumCover = ({ image }) => {
-  console.log(image)
   return (
     <StaticQuery
       query={graphql`

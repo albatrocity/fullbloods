@@ -3,19 +3,13 @@ const proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'Fullbloods',
-    description: 'A song-playing band from Kansas City',
+    description: 'A song-playing project from Kansas City',
     author: '@fullbloods',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
-    {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: require.resolve(`./src/components/Layout.js`),
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

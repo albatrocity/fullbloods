@@ -25,7 +25,6 @@ const BackgroundSection = ({ className, children, layout }) => (
       }
     `}
     render={data => {
-      // Set ImageData.
       const imageData =
         layout === 'mobile'
           ? data.mobile.childImageSharp.fluid

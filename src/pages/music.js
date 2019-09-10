@@ -22,18 +22,6 @@ const IndexPage = () => (
       frameBorder="0"
       allowFullScreen="allowfullscreen"
     />
-    <ul>
-      <li>
-        <a href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw">
-          Spotify
-        </a>
-      </li>
-      <li>
-        <a href="https://itunes.apple.com/us/artist/fullbloods/id553368622">
-          iTunes
-        </a>
-      </li>
-    </ul>
   </Page>
 )
 

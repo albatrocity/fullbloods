@@ -13,20 +13,34 @@ import Img from 'gatsby-image'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "mild_west_cover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid
+const AlbumCover = ({ image }) => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          mild_west: file(relativePath: { eq: "images/mild_west_cover.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          svt: file(relativePath: { eq: "images/svt_cover.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-      }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
-)
-export default Image
+      `}
+      render={data => (
+        <Img
+          style={{ border: '4px solid #fff' }}
+          fluid={data[image].childImageSharp.fluid}
+        />
+      )}
+    />
+  )
+}
+export default AlbumCover

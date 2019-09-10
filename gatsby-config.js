@@ -3,16 +3,18 @@ const proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'Fullbloods',
-    description: 'A song-playing band from Kansas City',
+    description: 'A song-playing project from Kansas City',
     author: '@fullbloods',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     'gatsby-transformer-sharp',
@@ -31,8 +33,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Ubuntu Mono`,
-            variants: [`400`, `700`, `400i`, `700i`],
+            family: `Nunito`,
+            variants: [`300`, `700`, `300i`, `700i`],
             formats: ['woff', 'woff2'],
           },
         ],

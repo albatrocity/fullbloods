@@ -1,4 +1,5 @@
 import React from 'react'
+import { Anchor } from 'grommet'
 
 const ListItemShow = ({
   summary,
@@ -11,9 +12,9 @@ const ListItemShow = ({
   <div className="list_item-show">
     <h3>
       {url && url.val ? (
-        <a href={url.val}>
+        <Anchor href={url.val}>
           {formatted_start} @ {summary}
-        </a>
+        </Anchor>
       ) : (
         <span>
           {formatted_start} @ {summary}

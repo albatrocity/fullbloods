@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { Box, Button, Text, Layer, ResponsiveContext, Grommet } from 'grommet'
-import Header from './Header'
+import Header from './header'
 import theme from '../lib/theme'
 import styled from 'styled-components'
 

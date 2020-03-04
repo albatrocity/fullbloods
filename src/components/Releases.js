@@ -27,6 +27,7 @@ const Releases = () => {
               buy
               image
               slug
+              highdive
             }
           }
         }

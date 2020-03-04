@@ -2,14 +2,15 @@
 title: 'Soft and Virtual Touch'
 image: svt
 slug: music/soft-and-virtual-touch
-release_date: 2019-09-01T16:13:56.929Z
+release_date: 2020-04-03T16:13:56.929Z
 spotify:
 buy:
 apm:
 youtube:
 bandcamp:
+highdive:
 soundcloud_embed:
-published: false
+published: true
 ---
 
 All songs written/performed/recorded/mixed by Ross Brown (&copy;2015 Bargain Hunt Music /ASCAP) in Kansas City, MO.  

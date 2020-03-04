@@ -16,6 +16,7 @@ const Release = ({
   youtube,
   bandcamp,
   slug,
+  highdive,
 }) => (
   <Box basis="50%">
     <Link direction="left" to={`/${slug}`}>
@@ -26,7 +27,12 @@ const Release = ({
         <StyledLink to={`/${slug}`}>{title}</StyledLink>
       </Heading>
       <Text size="small">{format(release_date, 'M/D/YY')}</Text>
-      <ListenLinks spotify={spotify} apm={apm} bandcamp={bandcamp} />
+      <ListenLinks
+        spotify={spotify}
+        apm={apm}
+        bandcamp={bandcamp}
+        highdive={highdive}
+      />
     </Box>
   </Box>
 )

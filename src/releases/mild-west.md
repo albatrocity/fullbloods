@@ -8,6 +8,7 @@ buy: http://www.highdivekc.com/albums/mild-west-by-fullbloods/
 apm: https://itunes.apple.com/us/album/mild-west/1072624551
 youtube:
 bandcamp: http://fullbloods.bandcamp.com/album/mild-west
+highdive: http://www.highdivekc.com/albums/mild-west-by-fullbloods/
 soundcloud_embed: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/86662207&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false
 published: true
 ---

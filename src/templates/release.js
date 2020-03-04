@@ -17,8 +17,6 @@ const ReleaseTemplate = ({ data }) => {
   const lyrics = data.lyrics.edges.map(x => x.node)
   const album = data.album.edges.map(x => x.node)[0]
 
-  console.log('IMAGE', album.frontmatter.image)
-
   return (
     <Page>
       <SEO

@@ -39,6 +39,7 @@ const ReleaseTemplate = ({ data }) => {
         spotify={album.frontmatter.spotify}
         apm={album.frontmatter.apm}
         bandcamp={album.frontmatter.bandcamp}
+        highdive={album.frontmatter.highdive}
         justify="center"
       />
 
@@ -108,6 +109,7 @@ export const pageQuery = graphql`
             release_date
             apm
             bandcamp
+            highdive
             spotify
             buy
             slug

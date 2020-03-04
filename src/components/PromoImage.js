@@ -10,7 +10,7 @@ const PromoImage = () => {
         query {
           promo: file(relativePath: { eq: "images/promo.jpg" }) {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 1200, quality: 95) {
                 ...GatsbyImageSharpFluid
               }
             }

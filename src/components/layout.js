@@ -35,7 +35,6 @@ const Layout = ({ children }) => {
         <Grommet theme={theme}>
           <ResponsiveContext.Consumer>
             {size => {
-              console.log(data.background.publicURL)
               const layout = size === 'small' ? 'mobile' : 'desktop'
               return (
                 <Background url={data.background.publicURL}>

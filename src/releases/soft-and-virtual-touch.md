@@ -7,9 +7,8 @@ spotify:
 buy:
 apm:
 youtube:
-bandcamp:
-highdive:
-soundcloud_embed:
+bandcamp: https://highdiverecords.bandcamp.com/album/fullbloods-soft-and-virtual-touch
+highdive: http://www.highdivekc.com/albums/soft-and-virtual-touch-by-fullbloods/
 published: true
 ---
 

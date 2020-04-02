@@ -8,6 +8,9 @@ const theme = {
       family: 'Nunito',
     },
   },
+  heading: {
+    extend: `max-width: none`,
+  },
 }
 
 export default theme

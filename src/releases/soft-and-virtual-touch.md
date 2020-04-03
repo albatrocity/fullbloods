@@ -3,10 +3,10 @@ title: 'Soft and Virtual Touch'
 image: svt
 slug: music/soft-and-virtual-touch
 release_date: 2020-04-03T16:13:56.929Z
-spotify:
-buy:
-apm:
-youtube:
+spotify: https://open.spotify.com/album/6A552YI2SM0EE1kbgdV0w9?si=jZdJ3f3BRZOg-LoznnilAQ
+buy: https://fullbloods.bandcamp.com
+apm: https://music.apple.com/us/album/soft-and-virtual-touch/1500104940
+youtube: https://www.youtube.com/watch?v=PpGCkoUv2Rs
 bandcamp: https://highdiverecords.bandcamp.com/album/fullbloods-soft-and-virtual-touch
 highdive: http://www.highdivekc.com/albums/soft-and-virtual-touch-by-fullbloods/
 published: true

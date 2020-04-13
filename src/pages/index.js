@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import Page from '../components/Page'
 import PromoImage from '../components/PromoImage'
 import AlbumCover from '../components/AlbumCover'
+import ListenLinks from '../components/ListenLinks'
 
 const IndexPage = () => (
   <Page>
@@ -24,7 +25,7 @@ const IndexPage = () => (
         style: 'dashed',
       }}
     >
-      <Box width="medium">
+      <Box flex="grow">
         <Link to="/music/soft-and-virtual-touch">
           <AlbumCover image="svt" />
         </Link>
@@ -42,18 +43,20 @@ const IndexPage = () => (
             href="https://fullbloods.bandcamp.com/album/soft-and-virtual-touch"
           />
         </Box>
-        <Heading level={4}>
-          Listen to the live audio broadcast on 4/3 at 8pm CST
-        </Heading>
-        <iframe
-          src="https://mixlr.com/users/7836792/embed?color=3e8eb3&autoplay=true"
-          width="100%"
-          height="180px"
-          scrolling="no"
-          frameborder="no"
-          marginheight="0"
-          marginwidth="0"
-        ></iframe>
+        <Box direction="row-responsive" gap="small">
+          <ListenLinks
+            spotify="https://open.spotify.com/album/6A552YI2SM0EE1kbgdV0w9?si=jZdJ3f3BRZOg-LoznnilAQ"
+            apm="https://music.apple.com/us/album/soft-and-virtual-touch/1500104940"
+            bandcamp="https://highdiverecords.bandcamp.com/album/fullbloods-soft-and-virtual-touch"
+            highdive="http://www.highdivekc.com/albums/soft-and-virtual-touch-by-fullbloods"
+            justify="center"
+            size={4}
+            margin={{ top: 'large' }}
+            fill="horizontal"
+            gap="medium"
+            wrap={true}
+          />
+        </Box>
       </Box>
     </Box>
 

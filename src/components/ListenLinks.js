@@ -9,6 +9,8 @@ const ListenLinks = ({
   apm,
   bandcamp,
   justify = 'start',
+  size = 1.4,
+  ...rest
 }) => (
   <Box
     direction="row"
@@ -16,25 +18,26 @@ const ListenLinks = ({
     align="center"
     justify={justify}
     pad={{ vertical: 'small' }}
+    {...rest}
   >
     {highdive && (
       <a href={highdive}>
-        <HighDiveIcon size="1.8em" color="#000" />
+        <HighDiveIcon size={`${size + 0.2}em`} color="#000" />
       </a>
     )}
     {spotify && (
       <a href={spotify}>
-        <FaSpotify size="1.4em" color="#000" />
+        <FaSpotify size={`${size}em`} color="#000" />
       </a>
     )}
     {apm && (
       <a href={apm}>
-        <FaApple size="1.4em" color="#000" />
+        <FaApple size={`${size}em`} color="#000" />
       </a>
     )}
     {bandcamp && (
       <a href={bandcamp}>
-        <FaBandcamp size="1.4em" color="#000" />
+        <FaBandcamp size={`${size}em`} color="#000" />
       </a>
     )}
   </Box>

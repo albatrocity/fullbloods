@@ -12,7 +12,7 @@ highdive: http://www.highdivekc.com/albums/soft-and-virtual-touch-by-fullbloods/
 published: true
 ---
 
-All songs written/performed/recorded/mixed by Ross Brown (&copy;2015 Bargain Hunt Music /ASCAP) in Kansas City, MO.  
+All songs written/performed/recorded/mixed by Ross Brown (&copy;2020 Bargain Hunt Music /ASCAP) in Kansas City, MO.  
 Mastered by Mike Nolte at [Eureka Mastering](http://eurekamastering.com)  
 Artwork by [Nika Winn](http://nikawinn.com)
 

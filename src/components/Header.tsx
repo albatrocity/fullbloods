@@ -13,9 +13,11 @@ import { Link } from 'gatsby'
 export function Header({ siteTitle }: { siteTitle: string }) {
   return (
     <Box>
-      <Link to="/">
-        <Logo />
-      </Link>
+      <Box>
+        <Link to="/">
+          <Logo />
+        </Link>
+      </Box>
       <nav>
         <Box>
           <Text size="large">

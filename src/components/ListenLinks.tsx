@@ -21,35 +21,38 @@ export function ListenLinks({
   ...rest
 }: ListenLinksProps) {
   return (
-  <Box
-    direction="row"
-    gap="small"
-    alignItems="center"
-    justifyContent={justify}
-    paddingY={20}
-    {...rest}
-  >
-    {highdive && (
-      <a href={highdive}>
-        <HighDiveIcon color="#000" />
-      </a>
-    )}
-    {spotify && (
-      <a href={spotify}>
-        <FaSpotify size={`${size}em`} color="#000" />
-      </a>
-    )}
-    {apm && (
-      <a href={apm}>
-        <FaApple size={`${size}em`} color="#000" />
-      </a>
-    )}
-    {bandcamp && (
-      <a href={bandcamp}>
-        <FaBandcamp size={`${size}em`} color="#000" />
-      </a>
-    )}
-  </Box>
-)}
+    <Box
+      direction="row"
+      gap="small"
+      alignItems="center"
+      justifyContent={justify}
+      paddingY={20}
+      {...rest}
+    >
+      {highdive && (
+        <Box width="100px">
+          <a href={highdive}>
+            <HighDiveIcon />
+          </a>
+        </Box>
+      )}
+      {spotify && (
+        <a href={spotify}>
+          <FaSpotify size={`${size}em`} color="#000" />
+        </a>
+      )}
+      {apm && (
+        <a href={apm}>
+          <FaApple size={`${size}em`} color="#000" />
+        </a>
+      )}
+      {bandcamp && (
+        <a href={bandcamp}>
+          <FaBandcamp size={`${size}em`} color="#000" />
+        </a>
+      )}
+    </Box>
+  )
+}
 
 export default ListenLinks

@@ -40,10 +40,18 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
-        path: `${__dirname}/src`,
+        name: `releases`,
+        path: `${__dirname}/src/releases`,
       },
-      __key: 'pages',
+      __key: 'releases',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: `lyrics`,
+        path: `${__dirname}/src/lyrics`,
+      },
+      __key: 'lyrics',
     },
     `gatsby-transformer-remark`,
   ],

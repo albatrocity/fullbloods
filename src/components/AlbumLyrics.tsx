@@ -8,6 +8,8 @@ type AlbumLyricsProps = {
       album: string
       track: string
       lyrics: string
+      credits: { name: string; role: string }[]
+      title: string
     }
     html: any
   }[]
@@ -15,7 +17,7 @@ type AlbumLyricsProps = {
 
 export function AlbumLyrics({ data }: AlbumLyricsProps) {
   return (
-    <Box direction="row-responsive" gap="medium">
+    <Box gap={1}>
       {data.map((x) => (
         <TrackDetails
           key={`${x.frontmatter.album}-${x.frontmatter.track}`}

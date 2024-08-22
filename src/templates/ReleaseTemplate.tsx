@@ -5,16 +5,15 @@ import { AlbumCover } from '@components'
 import { AlbumLyrics } from '@components'
 import { ListenLinks } from '@components'
 // import SEO from '../components/seo'
-// import Page from '../components/Page'
 
 import { Box } from '@styled-system/jsx'
 import { Text } from '@components'
+import { Heading } from 'src/components/Heading'
+import { css } from '@styled-system/css'
 
 const ReleaseTemplate = ({ data }) => {
-  console.log('data', data)
   const lyrics = data.lyrics.edges.map((x) => x.node)
   const album = data.album
-  console.log('album', album)
 
   return (
     <>
@@ -22,9 +21,11 @@ const ReleaseTemplate = ({ data }) => {
         title={album.frontmatter.title}
         keywords={['music', 'band', 'kansas city']}
       /> */}
-      <Link to="/music">Back to Music</Link>
-      <h1>{album.frontmatter.title}</h1>
-      <Text>
+      <Text component="span">
+        <Link to="/music">Back to Music</Link>
+      </Text>
+      <Heading level={1}>{album.frontmatter.title}</Heading>
+      <Text textStyle="info">
         {format(new Date(album.frontmatter.release_date), 'MMMM Do, yyyy')}
       </Text>
 
@@ -48,14 +49,19 @@ const ReleaseTemplate = ({ data }) => {
         </Box>
       )}
       <Box>
-        <h2>Lyrics/Players</h2>
+        <Heading level={2}>Lyrics/Players</Heading>
         <AlbumLyrics data={lyrics} />
       </Box>
 
       <Box>
-        <h2>Credits/Notes</h2>
+        <Heading level={2}>Credits/Notes</Heading>
 
-        <div dangerouslySetInnerHTML={{ __html: album.html }} />
+        <div
+          className={css({
+            textStyle: 'paragraph',
+          })}
+          dangerouslySetInnerHTML={{ __html: album.html }}
+        />
       </Box>
     </>
   )

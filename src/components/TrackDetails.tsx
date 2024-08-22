@@ -1,5 +1,7 @@
 import { Box } from '@styled-system/jsx'
 import { Text } from '@components'
+import { css } from '@styled-system/css'
+import { Heading } from './Heading'
 
 type TrackDetailsProps = {
   frontmatter: {
@@ -17,12 +19,16 @@ export function TrackDetails({
   frontmatter: { title, track, credits },
   html,
 }: TrackDetailsProps) {
-  console.log(html)
   return (
     <Box>
       <div>
-        <h3>{title}</h3>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Heading level={3}>{title}</Heading>
+        <div
+          className={css({
+            textStyle: 'paragraph',
+          })}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         {credits.map((x) => (
           <Text size="small" key={`role-${title}-${x.name}`}>
             {x.name} - {x.role}

@@ -5,13 +5,16 @@ import { Box } from '../../styled-system/jsx'
 import { Layout, PromoImage, Text } from '@components'
 import { AlbumCover } from '@components'
 import { ListenLinks } from '@components'
+import { Heading } from 'src/components/Heading'
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       {/* <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} /> */}
 
-      <h1>{data.featuredRelease.frontmatter.title} out now!</h1>
+      <Heading level={1}>
+        {data.featuredRelease.frontmatter.title} out now!
+      </Heading>
       <Box direction="row-responsive" gap="medium">
         <Box>
           <Link to={data.featuredRelease.frontmatter.slug}>

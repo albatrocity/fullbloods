@@ -1,4 +1,5 @@
 import { defineConfig } from '@pandacss/dev'
+import { textStyles } from './src/styles/textStyles'
 
 export default defineConfig({
   // Whether to use css reset
@@ -15,9 +16,31 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
+  globalFontface: {
+    Nichrome: {
+      src: 'url(/fonts/MDNichrome-Ultra.otf) format("opentype")',
+      fontWeight: 900,
+      fontStyle: 'normal',
+      fontDisplay: 'swap',
+    },
+  },
+
+  globalVars: {
+    '--font-nichrome': 'Nichrome, Helvetica',
+    '--font-montserrat': 'Montserrat Variable',
+  },
+
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      textStyles,
+      tokens: {
+        fonts: {
+          nichrome: { value: 'var(--font-nichrome), sans-serif' },
+          monsterrat: { value: 'var(--font-monsterrat), sans-serif' },
+        },
+      },
+    },
   },
 
   // The output directory for your css system

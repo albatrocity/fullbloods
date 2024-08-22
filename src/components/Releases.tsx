@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { Box } from '@styled-system/jsx'
+import { Grid, GridItem } from '@styled-system/jsx'
 
 import { Release } from './Release'
 
@@ -35,13 +35,12 @@ export function Releases() {
   `)
   const releases = data.allMarkdownRemark.edges.map((x) => x.node)
   return (
-    <Box direction="row-responsive" gap="small" justifyContent="space-between">
+    <Grid columns={4}>
       {releases.map((x) => (
-        <Release
-          key={x.id}
-          {...Object.assign(x.frontmatter, { body: x.html })}
-        />
+        <GridItem key={x.id}>
+          <Release {...Object.assign(x.frontmatter, { body: x.html })} />
+        </GridItem>
       ))}
-    </Box>
+    </Grid>
   )
 }

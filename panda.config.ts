@@ -1,5 +1,6 @@
 import { defineConfig } from '@pandacss/dev'
 import { textStyles } from './src/styles/textStyles'
+import { globalCss } from './src/styles/globalCss'
 
 export default defineConfig({
   // Whether to use css reset
@@ -29,6 +30,8 @@ export default defineConfig({
     '--font-nichrome': 'Nichrome, Helvetica',
     '--font-montserrat': 'Montserrat Variable',
   },
+
+  globalCss,
 
   // Useful for theme customization
   theme: {

@@ -1,16 +1,13 @@
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { format } from 'date-fns'
 
 import { AlbumCover } from '@components'
 import { AlbumLyrics } from '@components'
 import { ListenLinks } from '@components'
-import { renderAst } from 'src/lib/markdown'
 // import SEO from '../components/seo'
 
 import { Box } from '@styled-system/jsx'
 import { Text } from '@components'
-import { Heading } from 'src/components/Heading'
-import { css } from '@styled-system/css'
 
 const ReleaseTemplate = ({ data }) => {
   const lyrics = data.lyrics.edges.map((x) => x.node)
@@ -25,7 +22,7 @@ const ReleaseTemplate = ({ data }) => {
       <Text component="span">
         <Link to="/music">Back to Music</Link>
       </Text>
-      <Heading level={1}>{album.frontmatter.title}</Heading>
+      <h1>{album.frontmatter.title}</h1>
       <Text textStyle="info">
         {format(new Date(album.frontmatter.release_date), 'MMMM Do, yyyy')}
       </Text>
@@ -50,14 +47,14 @@ const ReleaseTemplate = ({ data }) => {
         </Box>
       )}
       <Box>
-        <Heading level={2}>Lyrics/Players</Heading>
+        <h2>Lyrics/Players</h2>
         <AlbumLyrics data={lyrics} />
       </Box>
 
       <Box>
-        <Heading level={2}>Credits/Notes</Heading>
+        <h2>Credits/Notes</h2>
 
-        {renderAst(album.htmlAst)}
+        <div dangerouslySetInnerHTML={{ __html: album.html }} />
       </Box>
     </>
   )
@@ -77,7 +74,7 @@ export const query = graphql`
       edges {
         node {
           id
-          htmlAst
+          html
           frontmatter {
             title
             track
@@ -90,7 +87,7 @@ export const query = graphql`
       }
     }
     album: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      htmlAst
+      html
       frontmatter {
         title
         image

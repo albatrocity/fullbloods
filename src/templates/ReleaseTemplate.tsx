@@ -4,6 +4,7 @@ import { format } from 'date-fns'
 import { AlbumCover } from '@components'
 import { AlbumLyrics } from '@components'
 import { ListenLinks } from '@components'
+import { renderAst } from 'src/lib/markdown'
 // import SEO from '../components/seo'
 
 import { Box } from '@styled-system/jsx'
@@ -56,12 +57,7 @@ const ReleaseTemplate = ({ data }) => {
       <Box>
         <Heading level={2}>Credits/Notes</Heading>
 
-        <div
-          className={css({
-            textStyle: 'paragraph',
-          })}
-          dangerouslySetInnerHTML={{ __html: album.html }}
-        />
+        {renderAst(album.htmlAst)}
       </Box>
     </>
   )
@@ -70,7 +66,7 @@ const ReleaseTemplate = ({ data }) => {
 export default ReleaseTemplate
 
 export const query = graphql`
-  query ReleaseByTitle($title: String!) {
+  query ReleaseByTitle($title: String!, $slug: String!) {
     lyrics: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/lyrics/" }
@@ -81,7 +77,7 @@ export const query = graphql`
       edges {
         node {
           id
-          html
+          htmlAst
           frontmatter {
             title
             track
@@ -93,8 +89,8 @@ export const query = graphql`
         }
       }
     }
-    album: markdownRemark(frontmatter: { slug: { eq: "music/mild-west" } }) {
-      html
+    album: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      htmlAst
       frontmatter {
         title
         image

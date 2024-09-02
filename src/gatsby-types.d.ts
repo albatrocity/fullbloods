@@ -2811,20 +2811,21 @@ type PromoImageQuery = { readonly promo: { readonly childImageSharp: { readonly 
 
 type ReleaseByTitleQueryVariables = Exact<{
   title: Scalars['String'];
+  slug: Scalars['String'];
 }>;
 
 
-type ReleaseByTitleQuery = { readonly lyrics: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly track: number | null, readonly credits: ReadonlyArray<{ readonly name: string | null, readonly role: string | null } | null> | null } | null } }> }, readonly album: { readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly image: string | null, readonly release_date: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly highdive: string | null, readonly spotify: string | null, readonly buy: string | null, readonly slug: string | null, readonly soundcloud_embed: string | null } | null } | null };
+type ReleaseByTitleQuery = { readonly lyrics: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly htmlAst: Record<string, unknown> | null, readonly frontmatter: { readonly title: string | null, readonly track: number | null, readonly credits: ReadonlyArray<{ readonly name: string | null, readonly role: string | null } | null> | null } | null } }> }, readonly album: { readonly htmlAst: Record<string, unknown> | null, readonly frontmatter: { readonly title: string | null, readonly image: string | null, readonly release_date: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly highdive: string | null, readonly spotify: string | null, readonly buy: string | null, readonly slug: string | null, readonly soundcloud_embed: string | null } | null } | null };
 
 type ReleasesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ReleasesQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null, readonly highdive: string | null } | null } }> } };
+type ReleasesQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly htmlAst: Record<string, unknown> | null, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null, readonly highdive: string | null } | null } }> } };
 
 type ReleasesDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ReleasesDataQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly html: string | null, readonly htmlAst: Record<string, unknown> | null, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null } | null } }> } };
+type ReleasesDataQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null } | null } }> } };
 
 
 }

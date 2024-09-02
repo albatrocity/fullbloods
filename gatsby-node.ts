@@ -22,8 +22,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
         edges {
           node {
             id
-            html
-            htmlAst
             frontmatter {
               title
               release_date
@@ -50,7 +48,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
   releases.forEach((edge) => {
     const {
       id,
-      htmlAst,
       frontmatter: { title, slug },
     } = edge.node
     createPage({

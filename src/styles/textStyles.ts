@@ -49,6 +49,7 @@ export const textStyles = defineTextStyles({
       letterSpacing: '0',
       textDecoration: 'None',
       textTransform: 'None',
+      marginBlockEnd: '1rem',
     },
   },
   info: {

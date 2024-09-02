@@ -1,7 +1,8 @@
 import { Box } from '@styled-system/jsx'
 import { Text } from '@components'
-import { css } from '@styled-system/css'
 import { Heading } from './Heading'
+import { renderAst } from 'src/lib/markdown'
+import { Node } from 'unified/lib'
 
 type TrackDetailsProps = {
   frontmatter: {
@@ -12,23 +13,18 @@ type TrackDetailsProps = {
       role: string
     }[]
   }
-  html: any
+  htmlAst: Node
 }
 
 export function TrackDetails({
   frontmatter: { title, track, credits },
-  html,
+  htmlAst,
 }: TrackDetailsProps) {
   return (
     <Box>
       <div>
         <Heading level={3}>{title}</Heading>
-        <div
-          className={css({
-            textStyle: 'paragraph',
-          })}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        {renderAst(htmlAst)}
         {credits.map((x) => (
           <Text size="small" key={`role-${title}-${x.name}`}>
             {x.name} - {x.role}

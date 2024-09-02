@@ -1,6 +1,7 @@
 import { Box } from '@styled-system/jsx'
 
 import { TrackDetails } from '@components'
+import { Node } from 'unified/lib'
 
 type AlbumLyricsProps = {
   data: {
@@ -11,7 +12,7 @@ type AlbumLyricsProps = {
       credits: { name: string; role: string }[]
       title: string
     }
-    html: any
+    htmlAst: Node
   }[]
 }
 

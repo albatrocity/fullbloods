@@ -1,30 +1,30 @@
 import { Link } from 'gatsby'
-import { Box, VStack } from '@styled-system/jsx'
-import { Text } from '@components'
+import { Box, Stack } from '@styled-system/jsx'
 import { format } from 'date-fns'
 import { AlbumCover } from './AlbumCover'
 import { ListenLinks } from './ListenLinks'
 import { IRelease } from '@types'
-import { Heading } from './Heading'
 import { css } from '@styled-system/css'
 
 export function Release(release: IRelease) {
   const { title, release_date, spotify, apm, bandcamp, slug, highdive } =
     release
   return (
-    <VStack gap={0}>
+    <Stack gap="2">
       <Link to={`/${slug}`}>
         <AlbumCover release={release} />
       </Link>
       <Box>
         <span
           className={css({
-            textStyle: 'heading',
+            textStyle: 'h5',
           })}
         >
           <Link to={`/${slug}`}>{title}</Link>
         </span>
-        <Text textStyle="info">{release_date.toString()}</Text>
+        <span className={css({ textStyle: 'info' })}>
+          {format(new Date(release_date), 'MMMM d, yyyy')}
+        </span>
         <ListenLinks
           spotify={spotify}
           apm={apm}
@@ -32,7 +32,7 @@ export function Release(release: IRelease) {
           highdive={highdive}
         />
       </Box>
-    </VStack>
+    </Stack>
   )
 }
 

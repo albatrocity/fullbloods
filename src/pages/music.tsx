@@ -1,18 +1,13 @@
 import { Layout, Releases } from '@components'
+import { Stack } from '@styled-system/jsx'
 
 const IndexPage = () => (
   <Layout>
     {/* <SEO title="Music" keywords={['music', 'band', 'kansas city']} /> */}
-    <h1>Music</h1>
-    <Releases />
-
-    <h4>EIGHT ONE SIXTY in-studio session</h4>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/36XKO9bXv-Q"
-      allowFullScreen={true}
-    />
+    <Stack gap="4">
+      <h1>Music</h1>
+      <Releases />
+    </Stack>
   </Layout>
 )
 

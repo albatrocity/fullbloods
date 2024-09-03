@@ -8,9 +8,14 @@ const headingStyles: TextStyle = {
   letterSpacing: '0',
   textDecoration: 'None',
   textTransform: 'None',
+  display: 'block',
 }
 
 export const globalCss = defineGlobalStyles({
+  'html, body': {
+    background: 'background',
+    color: 'text',
+  },
   h1: {
     ...headingStyles,
     fontSize: '2.986rem',
@@ -39,6 +44,7 @@ export const globalCss = defineGlobalStyles({
     letterSpacing: '0',
     textDecoration: 'None',
     textTransform: 'None',
-    marginBlockEnd: '2rem',
+    marginBlockEnd: '1rem',
+    maxWidth: '40rem',
   },
 })

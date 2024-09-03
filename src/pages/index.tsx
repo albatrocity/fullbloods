@@ -2,7 +2,7 @@ import { Link, graphql } from 'gatsby'
 import { Box } from '../../styled-system/jsx'
 
 // import SEO from '../components/Seo'
-import { Layout, PromoImage, Text } from '@components'
+import { Layout, PromoImage } from '@components'
 import { AlbumCover } from '@components'
 import { ListenLinks } from '@components'
 
@@ -41,20 +41,20 @@ const IndexPage = ({ data }) => {
 
       <PromoImage />
       <Box direction="row-responsive" gap="large">
-        <Text>
+        <p>
           Fullbloods is a studio project of songwriter and producer Ross Brown,
           dedicated to gently nudging the boundaries of pop music for the
           guitar/synth/bass/drums band arrangement. Live he is joined by his
           wonderfully talented friends, where the project takes on a separate
           but cohesive identity. Melodies and hooks are the core values of a
           Fullbloods song. Thanks for listening!
-        </Text>
+        </p>
         <Box>
-          <Text>
+          <p>
             <a href="mailto:booking@fullbloods.com">
               Booking: booking@fullbloods.com
             </a>
-          </Text>
+          </p>
         </Box>
       </Box>
     </Layout>

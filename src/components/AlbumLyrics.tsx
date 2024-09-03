@@ -1,7 +1,6 @@
-import { Box } from '@styled-system/jsx'
+import { Grid, GridItem } from '@styled-system/jsx'
 
 import { TrackDetails } from '@components'
-import { Node } from 'unified/lib'
 
 type AlbumLyricsProps = {
   data: {
@@ -12,19 +11,21 @@ type AlbumLyricsProps = {
       credits: { name: string; role: string }[]
       title: string
     }
-    htmlAst: Node
+    html: string
   }[]
 }
 
 export function AlbumLyrics({ data }: AlbumLyricsProps) {
   return (
-    <Box gap={1}>
+    <Grid columns={[1, 2]} gap="6">
       {data.map((x) => (
-        <TrackDetails
-          key={`${x.frontmatter.album}-${x.frontmatter.track}`}
-          {...x}
-        />
+        <GridItem>
+          <TrackDetails
+            key={`${x.frontmatter.album}-${x.frontmatter.track}`}
+            {...x}
+          />
+        </GridItem>
       ))}
-    </Box>
+    </Grid>
   )
 }

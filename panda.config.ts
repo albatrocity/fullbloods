@@ -1,6 +1,7 @@
 import { defineConfig } from '@pandacss/dev'
 import { textStyles } from './src/styles/textStyles'
 import { globalCss } from './src/styles/globalCss'
+import { colors } from './src/styles/colors'
 
 export default defineConfig({
   // Whether to use css reset
@@ -42,6 +43,7 @@ export default defineConfig({
           nichrome: { value: 'var(--font-nichrome), sans-serif' },
           monsterrat: { value: 'var(--font-monsterrat), sans-serif' },
         },
+        colors,
       },
     },
   },

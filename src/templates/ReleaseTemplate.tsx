@@ -1,62 +1,70 @@
 import { graphql, Link } from 'gatsby'
 import { format } from 'date-fns'
 
-import { AlbumCover } from '@components'
+import { css } from '@styled-system/css'
+import { Stack } from '@styled-system/jsx'
+
+import { AlbumCover, Layout } from '@components'
 import { AlbumLyrics } from '@components'
 import { ListenLinks } from '@components'
 // import SEO from '../components/seo'
-
-import { Box } from '@styled-system/jsx'
-import { Text } from '@components'
 
 const ReleaseTemplate = ({ data }) => {
   const lyrics = data.lyrics.edges.map((x) => x.node)
   const album = data.album
 
   return (
-    <>
+    <Layout>
       {/* <SEO
         title={album.frontmatter.title}
         keywords={['music', 'band', 'kansas city']}
       /> */}
-      <Text component="span">
+      <span>
         <Link to="/music">Back to Music</Link>
-      </Text>
-      <h1>{album.frontmatter.title}</h1>
-      <Text textStyle="info">
-        {format(new Date(album.frontmatter.release_date), 'MMMM Do, yyyy')}
-      </Text>
+      </span>
+      <Stack gap="8">
+        <div>
+          <h1>{album.frontmatter.title}</h1>
+          <p
+            className={css({
+              textStyle: 'info',
+            })}
+          >
+            {format(new Date(album.frontmatter.release_date), 'MMMM Do, yyyy')}
+          </p>
+        </div>
 
-      {album.frontmatter.image && <AlbumCover release={album} />}
+        {album.frontmatter.image && <AlbumCover release={album} />}
 
-      <ListenLinks
-        spotify={album.frontmatter.spotify}
-        apm={album.frontmatter.apm}
-        bandcamp={album.frontmatter.bandcamp}
-        highdive={album.frontmatter.highdive}
-        justify="center"
-      />
+        <ListenLinks
+          spotify={album.frontmatter.spotify}
+          apm={album.frontmatter.apm}
+          bandcamp={album.frontmatter.bandcamp}
+          highdive={album.frontmatter.highdive}
+          justify="center"
+        />
 
-      {album.frontmatter.soundcloud_embed && (
-        <Box>
-          <iframe
-            width="100%"
-            height="450"
-            src={album.frontmatter.soundcloud_embed}
-          />
-        </Box>
-      )}
-      <Box>
-        <h2>Lyrics/Players</h2>
-        <AlbumLyrics data={lyrics} />
-      </Box>
+        {album.frontmatter.soundcloud_embed && (
+          <div>
+            <iframe
+              width="100%"
+              height="450"
+              src={album.frontmatter.soundcloud_embed}
+            />
+          </div>
+        )}
 
-      <Box>
-        <h2>Credits/Notes</h2>
+        <Stack gap="4">
+          <h2>Lyrics/Players</h2>
+          <AlbumLyrics data={lyrics} />
+        </Stack>
 
-        <div dangerouslySetInnerHTML={{ __html: album.html }} />
-      </Box>
-    </>
+        <Stack gap="4">
+          <h2>Credits/Notes</h2>
+          <div dangerouslySetInnerHTML={{ __html: album.html }} />
+        </Stack>
+      </Stack>
+    </Layout>
   )
 }
 

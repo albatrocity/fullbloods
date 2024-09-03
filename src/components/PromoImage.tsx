@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Text } from '@components'
+import { css } from '@styled-system/css'
 
 export function PromoImage() {
   const data = useStaticQuery(graphql`
@@ -18,9 +18,9 @@ export function PromoImage() {
     image && (
       <>
         <GatsbyImage image={image} alt="Photo by Alec Nicholas" />
-        <Text size="small">
+        <caption className={css({ textStyle: 'info' })}>
           Photo by <a href="http://alecnicholas.com/">Alec Nicholas</a>
-        </Text>
+        </caption>
       </>
     )
   )

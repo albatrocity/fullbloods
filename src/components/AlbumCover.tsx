@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { css } from '@styled-system/css'
 import { IRelease } from '@types'
 
 /*
@@ -20,6 +21,8 @@ export function AlbumCover({ release }: { release: IRelease }) {
       mild_west: file(relativePath: { eq: "mild_west_cover.jpg" }) {
         childImageSharp {
           gatsbyImageData(
+            aspectRatio: 1
+            jpgOptions: { progressive: true }
             width: 1200
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -29,6 +32,8 @@ export function AlbumCover({ release }: { release: IRelease }) {
       svt: file(relativePath: { eq: "svt_cover.jpg" }) {
         childImageSharp {
           gatsbyImageData(
+            aspectRatio: 1
+            jpgOptions: { progressive: true }
             width: 1200
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -43,7 +48,10 @@ export function AlbumCover({ release }: { release: IRelease }) {
     image && (
       <GatsbyImage
         alt={release.title}
-        style={{ border: '4px solid #fff' }}
+        className={css({
+          borderWidth: '4px',
+          borderColor: 'text',
+        })}
         image={image}
       />
     )

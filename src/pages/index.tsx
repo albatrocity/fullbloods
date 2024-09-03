@@ -1,5 +1,5 @@
 import { Link, graphql } from 'gatsby'
-import { Box } from '../../styled-system/jsx'
+import { Box, Stack } from '@styled-system/jsx'
 
 // import SEO from '../components/Seo'
 import { Layout, PromoImage } from '@components'
@@ -12,21 +12,21 @@ const IndexPage = ({ data }) => {
       {/* <SEO title="Fullbloods" keywords={['music', 'band', 'kansas city']} /> */}
 
       <h1>{data.featuredRelease.frontmatter.title} out now!</h1>
-      <Box direction="row-responsive" gap="medium">
+      <Stack gap="4">
         <Box>
           <Link to={data.featuredRelease.frontmatter.slug}>
             <AlbumCover release={data.featuredRelease.frontmatter} />
           </Link>
         </Box>
-        <Box gap="small">
-          <Box direction="row-responsive" gap="small">
+        <Stack gap="4" direction="row">
+          <Stack gap="4" direction="row" alignItems="center">
             <a href="https://highdiverecords.bandcamp.com/album/fullbloods-soft-and-virtual-touch">
               Order Physical on Bandcamp
             </a>
             <a href="https://fullbloods.bandcamp.com/album/soft-and-virtual-touch">
               Order Digital on Bandcamp
             </a>
-          </Box>
+          </Stack>
           <Box direction="row-responsive" gap="small">
             <ListenLinks
               spotify="https://open.spotify.com/album/6A552YI2SM0EE1kbgdV0w9?si=jZdJ3f3BRZOg-LoznnilAQ"
@@ -36,11 +36,11 @@ const IndexPage = ({ data }) => {
               justify="center"
             />
           </Box>
-        </Box>
-      </Box>
+        </Stack>
+      </Stack>
 
-      <PromoImage />
-      <Box direction="row-responsive" gap="large">
+      <Stack gap="4">
+        <PromoImage />
         <p>
           Fullbloods is a studio project of songwriter and producer Ross Brown,
           dedicated to gently nudging the boundaries of pop music for the
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
             </a>
           </p>
         </Box>
-      </Box>
+      </Stack>
     </Layout>
   )
 }

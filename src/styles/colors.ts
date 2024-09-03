@@ -3,12 +3,16 @@ export const colors = {
     value: '#FBDCC8',
   },
   primary: {
-    value: '#0066AF',
+    value: '#006cb3',
   },
   secondary: {
-    value: '#F27326',
+    value: '#e0682c',
   },
   text: {
+    DEFAULT: { value: '#422918' },
+    muted: { value: '#864F2B' },
+  },
+  icon: {
     DEFAULT: { value: '#422918' },
     muted: { value: '#864F2B' },
   },

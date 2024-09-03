@@ -29,7 +29,6 @@ export default defineConfig({
 
   globalVars: {
     '--font-nichrome': 'Nichrome, Helvetica',
-    '--font-montserrat': 'Montserrat Variable',
   },
 
   globalCss,
@@ -41,7 +40,7 @@ export default defineConfig({
       tokens: {
         fonts: {
           nichrome: { value: 'var(--font-nichrome), sans-serif' },
-          monsterrat: { value: 'var(--font-monsterrat), sans-serif' },
+          monsterrat: { value: 'Montserrat Variable, sans-serif' },
         },
         colors,
       },

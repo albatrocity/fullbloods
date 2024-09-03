@@ -1,6 +1,8 @@
 import { FaSpotify, FaApple, FaBandcamp } from 'react-icons/fa'
 import { HighDiveIcon } from './HighDiveIcon'
-import { Box } from '@styled-system/jsx'
+import { Box, HStack, HstackProps } from '@styled-system/jsx'
+import { css } from '@styled-system/css'
+import { ColorToken } from '@styled-system/tokens'
 
 type ListenLinksProps = {
   highdive?: string
@@ -9,49 +11,43 @@ type ListenLinksProps = {
   bandcamp?: string
   justify?: 'start' | 'center' | 'end'
   size?: number
-}
+} & HstackProps
+
+const color: ColorToken = 'icon'
 
 export function ListenLinks({
   highdive,
   spotify,
   apm,
   bandcamp,
-  justify = 'start',
   size = 1.4,
   ...rest
 }: ListenLinksProps) {
   return (
-    <Box
-      direction="row"
-      gap="small"
-      alignItems="center"
-      justifyContent={justify}
-      paddingY={20}
-      {...rest}
-    >
+    <HStack {...rest}>
       {highdive && (
-        <Box width="100px">
+        <Box width="40px">
           <a href={highdive}>
-            <HighDiveIcon />
+            <HighDiveIcon color={color} />
           </a>
         </Box>
       )}
       {spotify && (
         <a href={spotify}>
-          <FaSpotify size={`${size}em`} color="#000" />
+          <FaSpotify size={`${size}em`} className={css({ color })} />
         </a>
       )}
       {apm && (
         <a href={apm}>
-          <FaApple size={`${size}em`} color="#000" />
+          <FaApple size={`${size}em`} className={css({ color })} />
         </a>
       )}
       {bandcamp && (
         <a href={bandcamp}>
-          <FaBandcamp size={`${size}em`} color="#000" />
+          <FaBandcamp size={`${size}em`} className={css({ color })} />
         </a>
       )}
-    </Box>
+    </HStack>
   )
 }
 

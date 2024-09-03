@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
-import { Box, Container, Grid } from '@styled-system/jsx'
+import { Box, Grid } from '@styled-system/jsx'
 import { css } from '@styled-system/css'
-import { Header } from './Header'
+import { Header, Container } from '@components'
 import { renderStripes, svgToBackgroundImage } from 'src/utils/stripes'
 
 export function Layout({ children }: PropsWithChildren) {
@@ -9,7 +9,7 @@ export function Layout({ children }: PropsWithChildren) {
     <Box>
       <Header siteTitle="Fullbloods" />
       <Container>
-        <Grid columns={2} gridTemplateColumns={'5vw auto'} gridGap="4">
+        <Grid columns={2} gridTemplateColumns={'5.5% auto'} gridGap="4">
           <div
             style={{
               backgroundImage: svgToBackgroundImage(renderStripes('middle')),
@@ -28,7 +28,7 @@ export function Layout({ children }: PropsWithChildren) {
               backgroundImage: svgToBackgroundImage(renderStripes('bottom')),
             }}
             className={css({
-              height: '350px',
+              height: '22vw',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'left top',
               backgroundSize: '87%',

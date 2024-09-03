@@ -15,6 +15,8 @@ export const globalCss = defineGlobalStyles({
   'html, body': {
     background: 'background',
     color: 'text',
+    fontFamily: 'monsterrat',
+    fontWeight: 500,
   },
   h1: {
     ...headingStyles,
@@ -38,7 +40,7 @@ export const globalCss = defineGlobalStyles({
   },
   p: {
     fontFamily: 'monsterrat',
-    fontWeight: '400',
+    fontWeight: '500',
     fontSize: '1rem',
     lineHeight: '1.3',
     letterSpacing: '0',
@@ -46,5 +48,12 @@ export const globalCss = defineGlobalStyles({
     textTransform: 'None',
     marginBlockEnd: '1rem',
     maxWidth: '40rem',
+  },
+  a: {
+    color: 'primary',
+    textDecoration: 'underline',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
 })

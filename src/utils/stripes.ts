@@ -8,9 +8,9 @@ type Clip = 'top' | 'middle' | 'bottom'
 function getViewBox(clip?: Clip) {
   switch (clip) {
     case 'top':
-      return '0 0 150 100'
+      return '0 0 150 300'
     case 'middle':
-      return '0 100 150 100'
+      return '0 100 150 50'
     case 'bottom':
       return '0 100 2379 769'
     default:

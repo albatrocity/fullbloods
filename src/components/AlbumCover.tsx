@@ -40,6 +40,17 @@ export function AlbumCover({ release }: { release: IRelease }) {
           )
         }
       }
+      playing_it_safe: file(relativePath: { eq: "playing_it_safe_cover.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 1
+            jpgOptions: { progressive: true }
+            width: 1200
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
     }
   `)
   const image = getImage(data[release?.image])

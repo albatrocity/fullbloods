@@ -20,7 +20,13 @@ export function Layout({ children }: PropsWithChildren) {
               backgroundSize: '100%',
             })}
           ></div>
-          <main>{children}</main>
+          <main
+            className={css({
+              paddingY: 4,
+            })}
+          >
+            {children}
+          </main>
         </Grid>
         <footer>
           <div

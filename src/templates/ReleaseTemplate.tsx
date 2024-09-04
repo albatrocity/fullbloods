@@ -19,9 +19,6 @@ const ReleaseTemplate = ({ data }) => {
         title={album.frontmatter.title}
         keywords={['music', 'band', 'kansas city']}
       /> */}
-      <span>
-        <Link to="/music">Back to Music</Link>
-      </span>
       <Stack gap="8">
         <div>
           <h1>{album.frontmatter.title}</h1>
@@ -30,11 +27,11 @@ const ReleaseTemplate = ({ data }) => {
               textStyle: 'info',
             })}
           >
-            {format(new Date(album.frontmatter.release_date), 'MMMM Do, yyyy')}
+            {format(new Date(album.frontmatter.release_date), 'MMMM d, yyyy')}
           </p>
         </div>
 
-        {album.frontmatter.image && <AlbumCover release={album} />}
+        {album.frontmatter.image && <AlbumCover release={album.frontmatter} />}
 
         <ListenLinks
           spotify={album.frontmatter.spotify}

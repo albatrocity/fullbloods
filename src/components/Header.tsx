@@ -47,7 +47,7 @@ export function Header({ siteTitle }: { siteTitle: string }) {
             })}
           ></div>
           <nav
-            className={`${hstack({ gap: '8' })} ${css({ paddingBottom: '4' })}`}
+            className={`${hstack({ gap: '8', justifyContent: 'flex-end' })} ${css({ paddingBottom: '4' })}`}
           >
             <Link className={linkStyle} to="/music">
               Music

@@ -15,6 +15,22 @@ export const textStyles = defineTextStyles({
       textTransform: 'None',
     },
   },
+  h1: {
+    description: 'Heading 1',
+    value: globalCss.h1,
+  },
+  h2: {
+    description: 'Heading 2',
+    value: globalCss.h2,
+  },
+  h3: {
+    description: 'Heading 3',
+    value: globalCss.h4,
+  },
+  h4: {
+    description: 'Heading 4',
+    value: globalCss.h4,
+  },
   h5: {
     description: 'Small heading',
     value: globalCss.h5,

@@ -29,6 +29,7 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "ical": "^0.8.0",
     "ky": "^1.7.2",
+    "lines-to-paragraphs": "^1.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1"

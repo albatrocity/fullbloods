@@ -1,5 +1,6 @@
 import { Stack } from '@styled-system/jsx'
 import { css } from '@styled-system/css'
+import paragraphs from 'lines-to-paragraphs'
 
 type TrackDetailsProps = {
   frontmatter: {
@@ -29,7 +30,7 @@ export function TrackDetails({
         </span>{' '}
         {title}
       </h3>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: paragraphs(html) }} />
       {credits.map((x) => (
         <span
           className={css({

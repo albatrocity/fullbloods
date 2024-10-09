@@ -19,7 +19,7 @@ export function AlbumLyrics({ data }: AlbumLyricsProps) {
   return (
     <Grid columns={[1, 2]} gap="6">
       {data.map((x) => (
-        <GridItem>
+        <GridItem key={`${x.frontmatter.album}-${x.frontmatter.track}`}>
           <TrackDetails
             key={`${x.frontmatter.album}-${x.frontmatter.track}`}
             {...x}

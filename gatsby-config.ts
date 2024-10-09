@@ -54,7 +54,12 @@ const config: GatsbyConfig = {
       },
       __key: 'lyrics',
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        gfm: true,
+      },
+    },
   ],
 }
 

@@ -1,6 +1,6 @@
 ---
 title: 'Playing It Safe'
-image: playing-it-safe
+image: playing_it_safe
 slug: music/playing-it-safe
 release_date: 2024-04-03T16:13:56.929Z
 spotify: https://open.spotify.com/album/6A552YI2SM0EE1kbgdV0w9?si=jZdJ3f3BRZOg-LoznnilAQ

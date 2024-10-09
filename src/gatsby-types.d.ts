@@ -2820,7 +2820,7 @@ type ReleaseByTitleQuery = { readonly lyrics: { readonly edges: ReadonlyArray<{ 
 type ReleasesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ReleasesQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly htmlAst: Record<string, unknown> | null, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null, readonly highdive: string | null } | null } }> } };
+type ReleasesQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly release_date: string | null, readonly spotify: string | null, readonly apm: string | null, readonly bandcamp: string | null, readonly buy: string | null, readonly image: string | null, readonly slug: string | null, readonly highdive: string | null } | null } }> } };
 
 type ReleasesDataQueryVariables = Exact<{ [key: string]: never; }>;
 

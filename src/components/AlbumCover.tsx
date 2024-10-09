@@ -15,7 +15,6 @@ import { IRelease } from '@types'
  */
 
 export function AlbumCover({ release }: { release: IRelease }) {
-  console.log('RELEASE', release)
   const data = useStaticQuery(graphql`
     query AlbumCovers {
       mild_west: file(relativePath: { eq: "mild_west_cover.jpg" }) {

@@ -16,7 +16,7 @@ export function Releases() {
         edges {
           node {
             id
-            htmlAst
+            html
             frontmatter {
               title
               release_date

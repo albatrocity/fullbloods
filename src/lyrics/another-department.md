@@ -12,10 +12,14 @@ credits:
 Two double queen beds
 Right?
 Tonight?
-So if that's all you need then
-I could let you go
+So
+If
+That's all you need then
+I could
+Let you go
 
-Don't you think of hanging up
+Don't you think of
+Hanging up
 
 Let me transfer you to another department
 There's a special offer you'll wanna know
@@ -23,9 +27,11 @@ They'll take care of you in the other department
 Thanks for calling
 
 We've got our eyes out
-Someone just like you
+Someone
+Just like you
 You haven't noticed
-You're not going to
+You're not
+Going to
 
 Don't you think of hanging up
 

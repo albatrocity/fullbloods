@@ -8,23 +8,27 @@ credits:
 ---
 
 Free myself enough to stand
-From the morning’s frozen hand
-Something’s gotta give
-I don’t wanna live like this
+From the morning's frozen hand
+Something's gotta give
+I don't wanna live like this
 
-Lookin for a way to improve
+Looking for a way to improve
 Safe inside my private room
-No one lookin in
-No one callin me a fool
+With no one looking in
+No one calling me a fool
 
-Well I can't really see what you're doing
-But I've gotta follow through
-How’s my warrior 2?
+But I can't really see what you're doing
+And I've gotta follow through
+How's my warrior two?
 
 Do my best to keep up slack
-But I can tell you’re holding back
-Don’t need to get along
-Just tell me what I’m doing wrong
+But I can tell you're holding back
+No need to get along
+Just tell me what I'm doing wrong
+
+Cuz I can't really see what you're doing
+And I've gotta follow through
+How's my warrior two?
 
 If I really think I've got it
 Would you tell me true

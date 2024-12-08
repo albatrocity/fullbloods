@@ -22,12 +22,12 @@ const config: GatsbyConfig = {
         extensions: ['.ts', '.tsx', '.mjs'],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     icon: 'src/images/icon.png',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/playing_it_safe_cover.jpg',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

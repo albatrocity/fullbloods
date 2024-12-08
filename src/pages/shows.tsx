@@ -1,9 +1,9 @@
 import { Shows, Layout } from '@components'
-// import SEO from '@components'
+import { SEO } from 'src/components/Seo'
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Shows" keywords={['music', 'band', 'kansas city']} /> */}
+    <SEO title="Fullbloods Shows" />
 
     <Shows />
   </Layout>

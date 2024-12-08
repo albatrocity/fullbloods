@@ -2,13 +2,12 @@
 title: 'Playing It Safe'
 image: playing_it_safe
 slug: music/playing-it-safe
-release_date: 2024-04-03T16:13:56.929Z
-spotify: https://open.spotify.com/album/6A552YI2SM0EE1kbgdV0w9?si=jZdJ3f3BRZOg-LoznnilAQ
-buy: https://fullbloods.bandcamp.com
+release_date: 2025-03-07T16:13:56.929Z
+spotify: https://open.spotify.com/album/4Rvd2HpMoRhkbDNTxEYVfN?si=abgxsn6oQw6bTR0LuOfMbw
+buy: https://fullbloods.bandcamp.com/album/playing-it-safe
 apm: https://music.apple.com/us/album/soft-and-virtual-touch/1500104940
-youtube: https://www.youtube.com/watch?v=PpGCkoUv2Rs
-bandcamp: https://highdiverecords.bandcamp.com/album/fullbloods-soft-and-virtual-touch
-highdive: http://www.highdivekc.com/albums/soft-and-virtual-touch-by-fullbloods/
+bandcamp: https://highdiverecords.bandcamp.com/album/fullbloods-playing-it-safe
+highdive: https://www.highdivekc.com/fullbloods-announce-official-release-date-new-album-playing-it-safe/
 published: true
 ---
 

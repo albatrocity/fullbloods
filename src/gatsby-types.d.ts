@@ -2804,6 +2804,11 @@ type HomepageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type HomepageQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly featuredRelease: { readonly id: string, readonly frontmatter: { readonly slug: string | null, readonly title: string | null, readonly release_date: string | null, readonly image: string | null } | null } | null };
 
+type NoHesitationCoverQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type NoHesitationCoverQuery = { readonly no_hesitation: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+
 type PromoImageQueryVariables = Exact<{ [key: string]: never; }>;
 
 

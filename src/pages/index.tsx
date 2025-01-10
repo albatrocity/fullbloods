@@ -5,19 +5,20 @@ import { SEO } from '../components/Seo'
 import { Layout } from '@components'
 import { ListenLinks } from '@components'
 import { NoHesitationCover } from 'src/components/NoHesitationCover'
+import { WhiteHouseCover } from 'src/components/WhiteHouseCover'
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Fullbloods" />
       <Stack gap="4">
-        <h1>New single, "No Hesitation"</h1>
+        <h1>New single, "White House Dot Com (Blue Websites)"</h1>
         <Stack gap="4">
-          <NoHesitationCover />
+          <WhiteHouseCover />
           <Box direction="row-responsive" gap="small">
             <ListenLinks
-              spotify="https://open.spotify.com/album/4Rvd2HpMoRhkbDNTxEYVfN?si=abgxsn6oQw6bTR0LuOfMbw"
-              apm="https://music.apple.com/us/album/no-hesitation/1783997328?i=1783997630"
+              spotify="https://open.spotify.com/album/2DMkrj7uSrSz6hinBc5jkx"
+              apm="https://music.apple.com/us/album/white-house-dot-com-blue-websites-single/1784003581"
               bandcamp="https://highdiverecords.bandcamp.com/album/fullbloods-playing-it-safe"
               highdive="https://www.highdivekc.com/fullbloods-announce-official-release-date-new-album-playing-it-safe/"
               justify="center"

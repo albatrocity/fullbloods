@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/music": [
+		"src/routes/music/+page.ts",
+		"src/routes/+layout.ts"
+	],
+	"/music/[slug]": [
+		"src/routes/music/[slug]/+page.ts",
+		"src/routes/+layout.ts"
+	],
+	"/shows": [
+		"src/routes/shows/+page.server.ts",
+		"src/routes/+layout.ts"
+	]
+}

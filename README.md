@@ -1,49 +1,38 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# sv
 
-## 🚀 Quick start
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-1.  **Create a Gatsby site.**
+## Creating a project
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+If you're seeing this, you've probably already done this step. Congrats!
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+```bash
+# create a new project in the current directory
+npx sv create
 
-2.  **Start developing.**
+# create a new project in my-app
+npx sv create my-app
+```
 
-    Navigate into your new site’s directory and start it up.
+## Developing
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-3.  **Open the code and start customizing!**
+```bash
+npm run dev
 
-    Your site is now running at http://localhost:8000!
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+## Building
 
-4.  **Learn more**
+To create a production version of your app:
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```bash
+npm run build
+```
 
-## 🚀 Quick start (Netlify)
+You can preview the production build with `npm run preview`.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

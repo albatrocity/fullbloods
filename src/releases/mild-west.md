@@ -27,16 +27,16 @@ All songs written by Ross Brown (&copy;2015 Bargain Hunt Music /ASCAP)
 
 Instruments used:
 
-- Rickenbacker 325 (1,2,3,4,5,6,7,9,10,11,12)</li>
-- FrankenStrat (1,2,3,4,5,7,9)</li>
-- Gretsch Duo Jet (6,11)</li>
-- Martin D-12 (4,5,8)</li>
-- Mirage B6-E (8,10)</li>
-- Fender Bullet Bass (1,3,4,5,7)</li>
-- Fender Musicmaster Bass (2,6,8,9,10)</li>
-- Rogers Drums (all)</li>
-- Roland Juno 6 (1,2,4,6,8,9,10,11)</li>
-- Moog Minitaur (11)</li>
-- Moog Sub Phatty (1,2,3,4,6)</li>
-- Farfisa Fast 5 (12)</li>
-- Fender and Gibson amps</li>
+- Rickenbacker 325 (1,2,3,4,5,6,7,9,10,11,12)
+- FrankenStrat (1,2,3,4,5,7,9)
+- Gretsch Duo Jet (6,11)
+- Martin D-12 (4,5,8)
+- Mirage B6-E (8,10)
+- Fender Bullet Bass (1,3,4,5,7)
+- Fender Musicmaster Bass (2,6,8,9,10)
+- Rogers Drums (all)
+- Roland Juno 6 (1,2,4,6,8,9,10,11)
+- Moog Minitaur (11)
+- Moog Sub Phatty (1,2,3,4,6)
+- Farfisa Fast 5 (12)
+- Fender and Gibson amps

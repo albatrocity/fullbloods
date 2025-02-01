@@ -1,53 +1,44 @@
 {
-  "name": "fullbloods",
-  "version": "1.0.0",
-  "private": true,
-  "description": "fullbloods",
-  "author": "Ross Brown",
-  "keywords": [
-    "gatsby"
-  ],
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "scripts": {
-    "prepare": "panda codegen",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@fontsource-variable/montserrat": "^5.0.20",
-    "gatsby": "^5.13.5",
-    "gatsby-adapter-netlify": "^1.1.7",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-remark": "^6.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "ical": "^0.8.0",
-    "ky": "^1.7.2",
-    "lines-to-paragraphs": "^1.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.2.1"
-  },
-  "devDependencies": {
-    "@pandacss/dev": "^0.45.0",
-    "@types/ical": "^0.8.3",
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-tsconfig-paths": "^1.0.6",
-    "postcss": "^8.4.41",
-    "typescript": "^5.3.3"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+	"name": "fullbloods-svk",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync && panda codegen || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint ."
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.5",
+		"@eslint/js": "^9.18.0",
+		"@iconify-json/fa6-brands": "^1.2.5",
+		"@pandacss/dev": "^0.51.1",
+		"@sveltejs/adapter-netlify": "^4.4.0",
+		"@sveltejs/enhanced-img": "^0.4.4",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@types/ical": "^0.8.3",
+		"eslint": "^9.18.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-svelte": "^2.46.1",
+		"globals": "^15.14.0",
+		"mdsvex": "^0.12.3",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.3",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.20.0",
+		"unplugin-icons": "^22.0.0",
+		"vite": "^6.0.0"
+	},
+	"dependencies": {
+		"date-fns": "^4.1.0",
+		"ical": "^0.8.0"
+	}
 }

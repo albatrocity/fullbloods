@@ -4,12 +4,10 @@
 	import ListenLinks from '$lib/components/ListenLinks.svelte';
 </script>
 
-<title>Fullbloods music</title>
-<meta name="description" content="" />
-<link
-	rel="icon"
-	href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>"
-/>
+<svelte:head>
+	<title>Fullbloods music | Kansas City</title>
+	<meta name="description" content="Fullbloods is a studio project of songwriter and producer Ross Brown (Shy Boys, Koney, Snacky), based in Kansas City, KS" />
+</svelte:head>
 
 <div class={stack({ gap: 4 })}>
 	<h1>New single, "White House Dot Com (Blue Websites)"</h1>
@@ -29,9 +27,7 @@
 
 	<div class={stack({ gap: 4 })}>
 		<p>
-			Fullbloods is a studio project of songwriter and producer Ross Brown (Shy Boys, Koney,
-			Snacky). Live he is joined by his friends and the music is probably better that way. Thanks
-			for listening!
+			Fullbloods is a studio project of songwriter and producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his friends and the music is probably better that way. Thanks for listening!
 		</p>
 		<div class={box()}>
 			<p>

@@ -1,10 +1,13 @@
 <script lang="ts">
-	import type { Show } from '$lib/types';
 	import { stack } from 'styled-system/patterns';
 	import ListItemShow from './ListItemShow.svelte';
 
 	const { data } = $props();
 </script>
+
+<svelte:head>
+	<title>Live Shows | Fullbloods</title>
+</svelte:head>
 
 <h1>Shows</h1>
 <div class={stack({ gap: 4 })}>

@@ -4,6 +4,11 @@
 	const { data } = $props();
 </script>
 
+<svelte:head>
+	<title>Music | Fullbloods</title>
+	<meta name="description" content="Musical releases by Fullbloods" />
+</svelte:head>
+
 <div class={stack({ gap: 4 })}>
 	<h1>Music</h1>
 

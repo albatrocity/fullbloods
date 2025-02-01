@@ -6,12 +6,16 @@
 	import Tracks from './Tracks.svelte';
 	import ListenLinks from '$lib/components/ListenLinks.svelte';
 	import PictureFrame from '$lib/components/PictureFrame.svelte';
-	import { fade } from 'svelte/transition';
 
 	const { data } = $props();
 	const { metadata, tracks, imageData } = data;
 	const { title } = data.metadata;
 </script>
+
+<svelte:head>
+	<title>{title} | Fullbloods</title>
+	<meta name="description" content={`${title} by Fullbloods, released on ${format(new Date(metadata.release_date), 'MMMM d, yyyy')}`} />
+</svelte:head>
 
 <div class={stack({ gap: 8 })}>
 	<div>

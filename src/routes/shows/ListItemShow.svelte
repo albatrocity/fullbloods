@@ -6,7 +6,7 @@
 </script>
 
 <div class="list_item-show">
-	<span class={css({ textStyle: 'h5' })}>
+	<span class={css({ textStyle: 'h4' })}>
 		{#if url?.val}
 			<a href={url.val} target="_blank">
 				{formatted_start} @ {summary}

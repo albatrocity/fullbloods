@@ -27,7 +27,7 @@
 
 	<div class={stack({ gap: 4 })}>
 		<p>
-			Fullbloods is a studio project of songwriter and producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his friends and the music is probably better that way. Thanks for listening!
+			Fullbloods is a studio project of Kansas City-based songwriter and producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his friends and the music is probably better that way. Thanks for listening!
 		</p>
 		<div class={box()}>
 			<p>

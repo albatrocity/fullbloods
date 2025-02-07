@@ -10,14 +10,13 @@
 </svelte:head>
 
 <div class={stack({ gap: 4 })}>
-	<h1>New single, "White House Dot Com (Blue Websites)"</h1>
+	<h1>New single, "Fish in a Bowl"</h1>
 	<div class={stack({ gap: 4 })}>
-		<!-- <WhiteHouseCover /> -->
 		<FeaturedCover />
 		<div class={box({ gap: 1 })}>
 			<ListenLinks
-				spotify="https://open.spotify.com/album/2DMkrj7uSrSz6hinBc5jkx"
-				apm="https://music.apple.com/us/album/white-house-dot-com-blue-websites-single/1784003581"
+				spotify="https://open.spotify.com/album/6UWfKDULMvePv0Opp6E3p5"
+				apm="https://music.apple.com/us/album/fish-in-a-bowl-single/1783973915"
 				bandcamp="https://highdiverecords.bandcamp.com/album/fullbloods-playing-it-safe"
 				highdive="https://www.highdivekc.com/fullbloods-announce-official-release-date-new-album-playing-it-safe/"
 				justify="center"

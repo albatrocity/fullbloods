@@ -7,13 +7,13 @@
 <figure class={stack({ gap: '2' })}>
 	<a
 		target="_blank"
-		href="https://distrokid.com/hyperfollow/fullbloods/white-house-dot-com-blue-websites"
-		aria-label="Listen to Fullbloods' new single, 'White House Dot Com (Blue Websites)'"
+		href="https://distrokid.com/hyperfollow/fullbloods/fish-in-a-bowl"
+		aria-label="Listen to Fullbloods' new single, 'Fish In a Bowl'"
 	>
 		<PictureFrame>
 			<enhanced:img
-				src="$lib/assets/releases/white-house-dot-com.jpg"
-				alt="A man dressed as an umpire uses tongs to retrieve a single hot dog from a propane grill. One might think he intends to place it on the lone slice of white bread on a paper plate nearby. This photo was taken by David Robert Elliott."
+				src="$lib/assets/releases/fish-in-a-bowl.jpg"
+				alt="A man dressed as an umpire standing on a tree stump between two dead arborvitae trees, one of which he is watering with a garden hose. This photo was taken by David Robert Elliott."
 			/>
 		</PictureFrame>
 	</a>

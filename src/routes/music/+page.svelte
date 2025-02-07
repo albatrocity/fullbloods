@@ -14,7 +14,8 @@
 
 	<div
 		class={grid({
-			columns: [1, 2, 3]
+			columns: [1, 2, 3],
+			gap: [10, 4]
 		})}
 	>
 		{#each data.releases as release (release.slug)}

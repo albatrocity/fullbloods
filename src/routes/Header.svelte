@@ -11,10 +11,9 @@
 	const { siteTitle } = $props();
 
 	const linkStyle = css({
+		textStyle: 'h4',
 		color: 'primary',
-		fontFamily: 'nichrome',
-		fontSize: 'x-large',
-		textDecoration: 'none'
+		textDecoration: 'none',
 	});
 	const backgroundImage = svgToBackgroundImage(renderStripes('top'));
 </script>
@@ -40,6 +39,7 @@
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: '100%'
 				})}
+				
 				style={`background-image: ${backgroundImage}`}
 			></div>
 			<nav
@@ -47,19 +47,21 @@
 			>
 				<a href="/music" class={linkStyle}> Music </a>
 				<a class={linkStyle} href="/shows"> Shows </a>
-				<a target="_blank" class={linkStyle} href="https://fullbloods.bandcamp.com">
-					<FaBandcamp />
-				</a>
-				<a
-					target="_blank"
-					class={linkStyle}
-					href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw"
-				>
-					<FaSpotify />
-				</a>
-				<a target="_blank" class={linkStyle} href="https://www.instagram.com/fullbloods.mp3/">
-					<FaInstagram />
-				</a>
+				<div class={hstack({ gap: 2 })}>
+					<a target="_blank" class={linkStyle} href="https://fullbloods.bandcamp.com">
+						<FaBandcamp />
+					</a>
+					<a
+						target="_blank"
+						class={linkStyle}
+						href="https://open.spotify.com/artist/5cyE8hPu5ZeisPUPmOl9Aw"
+					>
+						<FaSpotify />
+					</a>
+					<a target="_blank" class={linkStyle} href="https://www.instagram.com/fullbloods.mp3/">
+						<FaInstagram />
+					</a>
+				</div>
 			</nav>
 		</div>
 	</div>

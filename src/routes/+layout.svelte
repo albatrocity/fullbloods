@@ -31,7 +31,8 @@
 		<footer>
 			<div
 				class={css({
-					height: '22vw',
+					height: '21vw',
+					maxHeight: '200px',
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'left top',
 					backgroundSize: '87%'

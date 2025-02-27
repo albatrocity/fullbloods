@@ -35,8 +35,9 @@
       {@render schedule()}
       <p>---<strong>Check this space closer to the time for a link</strong>---</p>
     {/if}
-  {:else}
-    <h1>New single, "Fish in a Bowl"</h1>
+    <hr/>
+  {/if}
+    <h2>New single, "Fish in a Bowl"</h2>
     <div class={stack({ gap: 4 })}>
       <FeaturedCover />
       <div class={box({ gap: 1 })}>
@@ -49,7 +50,7 @@
         />
       </div>
     </div>
-  {/if}
+
   
   <hr />
 

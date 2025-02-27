@@ -5,7 +5,17 @@
 
   const { data } = $props()
 
-
+  const today = new Date()
+  const cstOffset = -6 * 60 // CST offset in minutes
+  const todayCST = new Date(
+    today.getTime() + (today.getTimezoneOffset() + cstOffset) * 60000
+  )
+  const isListeningPartyDay =
+    todayCST > new Date('2025-02-25T18:00:00-06:00') &&
+    todayCST < new Date('2025-02-28T00:00:00-06:00')
+  const isListeningPartyActive =
+    todayCST > new Date('2025-02-27T18:00:00-06:00') &&
+    todayCST < new Date('2025-02-28T00:00:00-06:00')
 </script>
 
 <svelte:head>
@@ -22,10 +32,10 @@
 {/snippet}
 
 <div class={stack({ gap: 4 })}>
-  {#if data.isListeningPartyDay}
+  {#if isListeningPartyDay}
     <h1>"Playing It Safe" listening party</h1>
     
-    {#if data.isListeningPartyActive}
+    {#if isListeningPartyActive}
       <p>Hop on an audio-only stream of the new album with some commentary!</p>
       {@render schedule()}
       <h4><a href="https://www.listeningroom.club/rooms/0468e62e42062530c8062a3e8f8c54cf/" target="_blank">Join the Listening party</a></h4>

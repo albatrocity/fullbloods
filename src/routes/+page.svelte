@@ -13,6 +13,14 @@
   />
 </svelte:head>
 
+{#snippet schedule()}
+<ul>
+  <li><strong>7:00</strong> Album on vinyl: (~39mins)</li>
+  <li><strong>7:40</strong> Album digital with commentary: (~39mins)</li>
+  <li><strong>8:30</strong> Rejects and demos, party</li>
+</ul>
+{/snippet}
+
 <div class={stack({ gap: 4 })}>
   <h1>"Playing it Safe" now available</h1>
   <div class={stack({ gap: 4 })}>
@@ -35,18 +43,17 @@
     </div>
   </div>
 
-  <div class={stack({ gap: 4 })}>
-    <p>
-      Fullbloods is a studio project of Kansas City-based songwriter and
-      producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his
-      friends and the music is probably better that way. Thanks for listening!
-    </p>
-    <div class={box()}>
-      <p>
-        <a href="mailto:booking@fullbloods.com">
-          Booking: booking@fullbloods.com
-        </a>
-      </p>
-    </div>
-  </div>
+  
+  <hr />
+
+	<div class={stack({ gap: 4 })}>
+		<p>
+			Fullbloods is a studio project of Kansas City-based songwriter and producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his friends and the music is probably better that way. Thanks for listening!
+		</p>
+		<div class={box()}>
+			<p>
+				<a href="mailto:booking@fullbloods.com"> Booking: booking@fullbloods.com </a>
+			</p>
+		</div>
+	</div>
 </div>

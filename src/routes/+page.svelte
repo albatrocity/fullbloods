@@ -66,6 +66,17 @@
   </div>
   <hr />
 
+  <div class={stack({gap: 4})}>
+    <h1>"Fish in a Bowl" music video</h1>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QuVLcuezRak?si=1OY1Z4got_2gJsIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <p>Directed, Animated, and Edited by <a target="_blank" href='https://www.instagram.com/spy_world_forever/'>Kyle Little</a></p>
+
+    <p>Camera and Lighting by <a target="_blank" href="https://alecnicholas.com">Alec Nicholas</a> at <a target="_blank" href="https://www.instagram.com/stacieslighthouse/">Stacies Lighthouse</a>.</p>
+  </div>
+
+  <hr />
+
   <div class={stack({ gap: 4 })}>
     <p>
       Fullbloods is a studio project of Kansas City-based songwriter and producer Ross Brown (Shy Boys, Koney, Snacky). Live he is joined by his friends and the music is probably better that way. Thanks for listening!

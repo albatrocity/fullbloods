@@ -29,6 +29,15 @@
   <div class={stack({ gap: 4 })}>
     <h1>"Playing it Safe" now available</h1>
     <div class={stack({ gap: 4, direction: ['column', 'row'] })}>
+      <div class={css({maxWidth: '20em', flex: 1, width: '100%'})}>
+        <ul>
+          <li><a target="_blank" href="https://highdiverecords.bandcamp.com/album/fullbloods-playing-it-safe" class={hstack()}><div class={css({ width: '0.9rem'})}><HighDiveLogo color="primary" /></div> Order Playing it Safe on vinyl</a></li>
+          <li><a target="_blank" href="https://tidal.com/browse/album/399178990" class={hstack()}><div class={css({width: '0.9rem'})}><Tidal /></div>Listen on Tidal</a></li>
+          <li><a target="_blank" href="https://music.apple.com/us/album/playing-it-safe/1779662655" class={hstack()}><FaApple /> Listen on Apple Music</a></li>
+          <li><a target="_blank" href="https://open.spotify.com/album/7K44Df2mT2w7wsw3Zm7CAe?si=-H6gRtYaTtCga3XAdmBabQ" class={hstack()}><FaSpotify /> Listen on Spotify Music</a></li>
+        </ul>
+        <p class={css({margin: '1rem 0'})}><a href="/music/playing-it-safe">Read the credits and lyrics</a></p>
+      </div>
       <div class={stack({ gap: 4, flex: 1 })}>
         <a href="/music/playing-it-safe"
           ><PictureFrame>
@@ -49,15 +58,7 @@
           />
         </div>
       </div>
-      <div class={css({maxWidth: '20em', flex: 1, width: '100%'})}>
-        <ul>
-          <li><a target="_blank" href="https://highdiverecords.bandcamp.com/album/fullbloods-playing-it-safe" class={hstack()}><div class={css({ width: '0.9rem'})}><HighDiveLogo color="primary" /></div> Order Playing it Safe on vinyl</a></li>
-          <li><a target="_blank" href="https://tidal.com/browse/album/399178990" class={hstack()}><div class={css({width: '0.9rem'})}><Tidal /></div>Listen on Tidal</a></li>
-          <li><a target="_blank" href="https://music.apple.com/us/album/playing-it-safe/1779662655" class={hstack()}><FaApple /> Listen on Apple Music</a></li>
-          <li><a target="_blank" href="https://open.spotify.com/album/7K44Df2mT2w7wsw3Zm7CAe?si=-H6gRtYaTtCga3XAdmBabQ" class={hstack()}><FaSpotify /> Listen on Spotify Music</a></li>
-        </ul>
-        <p class={css({margin: '1rem 0'})}><a href="/music/playing-it-safe">Read the credits and lyrics</a></p>
-      </div>
+      
     
     </div>
 

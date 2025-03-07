@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Track } from '$lib/types';
 	import { css } from 'styled-system/css';
-	import { gridItem, grid, stack } from 'styled-system/patterns';
+	import { stack } from 'styled-system/patterns';
 	import type { Component } from 'svelte';
 
 	type TrackProps = {

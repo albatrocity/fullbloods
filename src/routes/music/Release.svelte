@@ -7,7 +7,7 @@
 	import PictureFrame from '$lib/components/PictureFrame.svelte';
 	import type { Release } from '$lib/types';
 
-	const { slug, title, release_date, spotify, apm, bandcamp, highdive, imageData }: Release =
+	const { slug, title, release_date, spotify, apm, bandcamp, highdive, imageData, tidal }: Release =
 		$props();
 </script>
 
@@ -30,6 +30,6 @@
 		<span class={css({ textStyle: 'info' })}>
 			{format(new Date(release_date), 'MMMM d, yyyy')}
 		</span>
-		<ListenLinks {spotify} {apm} {bandcamp} {highdive} />
+		<ListenLinks {spotify} {apm} {bandcamp} {highdive} {tidal} />
 	</div>
 </div>

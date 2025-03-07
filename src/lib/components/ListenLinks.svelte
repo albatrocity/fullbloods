@@ -9,19 +9,21 @@
 	import type { HstackProperties } from 'styled-system/patterns';
 
 	import HighDiveLogo from './HighDiveLogo.svelte';
+	import TidalLogo from './TidalLogo.svelte'
 
 	type ListenLinksProps = {
 		highdive?: string;
 		spotify?: string;
 		apm?: string;
 		bandcamp?: string;
+		tidal?: string;
 		justify?: 'start' | 'center' | 'end';
 		size?: number;
 	} & HstackProperties;
 
 	const color: ColorToken = 'icon';
 
-	const { highdive, spotify, apm, bandcamp, size = 1.4, ...rest }: ListenLinksProps = $props();
+	const { highdive, spotify, apm, bandcamp, tidal, size = 1.4, ...rest }: ListenLinksProps = $props();
 </script>
 
 <div class={hstack(rest)}>
@@ -32,14 +34,20 @@
 			</a>
 		</div>
 	{/if}
-	{#if spotify}
-		<a href={spotify}>
-			<FaSpotify size={`${size}em`} class={css({ color })} />
+	{#if tidal}
+		<a href={tidal}>
+			<div class={css({ width: `${size}em`, color })}>
+			<TidalLogo />
 		</a>
 	{/if}
 	{#if apm}
 		<a href={apm}>
 			<FaApple size={`${size}em`} class={css({ color })} />
+		</a>
+	{/if}
+	{#if spotify}
+		<a href={spotify}>
+			<FaSpotify size={`${size}em`} class={css({ color })} />
 		</a>
 	{/if}
 	{#if bandcamp}

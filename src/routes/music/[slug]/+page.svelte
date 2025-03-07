@@ -40,6 +40,7 @@
 		apm={metadata.apm}
 		bandcamp={metadata.bandcamp}
 		highdive={metadata.highdive}
+		tidal={metadata.tidal}
 		justify="center"
 	/>
 

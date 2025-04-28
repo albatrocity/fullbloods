@@ -10,8 +10,6 @@ type Props = {
   fetch: typeof fetch
 }
 
-export const TIMEZONE = 'America/Chicago'
-
 export async function getCalendarEvents({ fetch }: Props) {
   const events: CalendarEvent[] = []
   if (!PUBLIC_CAL_URI) {

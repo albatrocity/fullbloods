@@ -11,7 +11,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
-    "lint": "prettier --check . && eslint ."
+    "lint": "prettier --check . && eslint .",
+    "trigger:build": "netlify functions:invoke scheduled-deploy"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
@@ -38,6 +39,8 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
+    "@date-fns/tz": "^1.2.0",
+    "@netlify/functions": "^3.1.2",
     "date-fns": "^4.1.0",
     "ical": "^0.8.0",
     "remark-breaks": "^4.0.0",

@@ -42,3 +42,30 @@ export type Track = {
   track: number
   credits: { name: string; role: string }[]
 }
+
+export type CalendarEvent = {
+  summary?: string
+  start: Date
+  end?: Date
+  description?: string
+  location?: string
+  url: {
+    val?: {
+      val?: string
+    }
+  }
+  formatted_start: string
+  uid: string
+  attachments: CalendarAttachment[]
+}
+
+export type CalendarAttachment = {
+  params: {
+    FMTTYPE: string
+    SIZE: number
+    FILENAME: string
+    'MANAGED-ID': string
+  }
+  url: string
+  srcSet?: string
+}

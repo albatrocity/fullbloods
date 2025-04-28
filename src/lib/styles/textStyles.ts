@@ -25,7 +25,7 @@ export const textStyles = defineTextStyles({
   },
   h3: {
     description: 'Heading 3',
-    value: globalCss.h4,
+    value: globalCss.h3,
   },
   h4: {
     description: 'Heading 4',

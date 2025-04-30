@@ -90,16 +90,18 @@ export async function getCalendarEvents({ fetch }: Props) {
       }
     }
   }
-  const sorted = events.sort(function (a, b) {
-    if (a.start && b.start)
-      return isBefore(
-        new TZDate(a.start, TIMEZONE),
-        new TZDate(b.start, TIMEZONE)
-      )
-        ? -1
-        : 1
-    return 0
-  })
+  const sorted = events
+    .filter((ev) => !!ev)
+    .sort(function (a, b) {
+      if (a.start && b.start)
+        return isBefore(
+          new TZDate(a.start, TIMEZONE),
+          new TZDate(b.start, TIMEZONE)
+        )
+          ? -1
+          : 1
+      return 0
+    })
 
   return sorted
 }

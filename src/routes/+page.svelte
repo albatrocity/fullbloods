@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { stack, box, hstack } from 'styled-system/patterns'
+  import { stack, box, hstack, vstack } from 'styled-system/patterns'
   import ListenLinks from '$lib/components/ListenLinks.svelte'
   import PictureFrame from '$lib/components/PictureFrame.svelte'
   import HighDiveLogo from '$lib/components/HighDiveLogo.svelte'
@@ -7,6 +7,8 @@
   import { css } from 'styled-system/css'
   import FaSpotify from 'virtual:icons/fa6-brands/spotify'
   import FaApple from 'virtual:icons/fa6-brands/apple'
+
+  const { data } = $props()
 </script>
 
 <svelte:head>
@@ -17,7 +19,55 @@
   />
 </svelte:head>
 
+{#snippet schedule()}
+  <h5>Schedule</h5>
+  <ul
+    class={css({
+      listStyle: 'inside',
+      marginLeft: '1rem',
+    })}
+  >
+    <li>
+      <strong>7:30 - 8</strong>: Unreleased tracks and demos from 2018 - 2020
+    </li>
+    <li>
+      <strong>8 - ?</strong>: Free play and goofing off
+    </li>
+  </ul>
+{/snippet}
+
 <div class={stack({ gap: 10 })}>
+  {#if data.isListeningPartyDay}
+    <div class={stack({ gap: 4 })}>
+      <h1>Listening party, round 2</h1>
+
+      {#if data.isListeningPartyActive}
+        <p>
+          Come heckle me and some friends as we do our best to entertain you in
+          an interactive audio format.
+        </p>
+        {@render schedule()}
+        <h4>
+          <a
+            href="https://www.listeningroom.club/rooms/005f120274309fa3f90d0dfbcd16a6ef/"
+            target="_blank">Join the Listening party</a
+          >
+        </h4>
+      {:else}
+        <p>
+          I'm hosting an audio broadcast on <strong
+            >Wednesday, May 14th at 7:30pm CST</strong
+          >! <strong>Check back here for a link closer to time.</strong>
+        </p>
+        {@render schedule()}
+        <p>
+          ---<strong>Check this space closer to the time for a link</strong>---
+        </p>
+      {/if}
+    </div>
+    <hr />
+  {/if}
+
   <div class={stack({ gap: 4 })}>
     <h1>"Playing it Safe" now available</h1>
     <div class={stack({ gap: 4, direction: ['column', 'row'] })}>

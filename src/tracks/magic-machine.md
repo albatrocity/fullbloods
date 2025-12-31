@@ -1,6 +1,6 @@
 ---
 title: 'Magic Machine'
-album: "Magic Machine/Who's Left"
+album: "Magic Machine"
 track: 1
 credits:
   - name: Ross Brown
@@ -11,6 +11,8 @@ credits:
     role: Electric guitar, "hey", claps
   - name: Fritz Hutchison
     role: Drums, "hey", claps
+  - name: Joel Stratton
+    role: Bass
   - name: Kyle Little
     role: Synth, "hey", claps
   - name: Adam Schlozman

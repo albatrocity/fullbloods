@@ -1,6 +1,6 @@
 ---
 title: "Who's Left"
-album: "Magic Machine/Who's Left"
+album: "Magic Machine"
 track: 2
 credits:
   - name: Ross Brown
@@ -11,6 +11,8 @@ credits:
     role: Electric Guitar
   - name: Fritz Hutchison
     role: Drums
+  - name: Joel Stratton
+    role: Bass
   - name: Kyle Little
     role: Rhodes electric piano
   - name: Alec Nicholas

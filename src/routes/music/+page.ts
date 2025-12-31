@@ -5,7 +5,7 @@ export const load: PageLoad = async () => {
   const paths = import.meta.glob(`/src/releases/*.md`, { eager: true })
 
   const imageModules: Record<string, ImageData> = import.meta.glob(
-    '$lib/assets/releases/*.{jpeg,jpg,webp}',
+    '$lib/assets/releases/*.{jpeg,jpg,webp,png}',
     {
       eager: true,
       query: {

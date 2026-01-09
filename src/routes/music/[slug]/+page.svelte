@@ -41,6 +41,7 @@
 		bandcamp={metadata.bandcamp}
 		highdive={metadata.highdive}
 		tidal={metadata.tidal}
+		youtube={metadata.youtube}
 		justify="center"
 	/>
 

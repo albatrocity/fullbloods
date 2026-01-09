@@ -19,55 +19,37 @@
   />
 </svelte:head>
 
-{#snippet schedule()}
-  <h5>Schedule</h5>
-  <ul
-    class={css({
-      listStyle: 'inside',
-      marginLeft: '1rem',
-    })}
-  >
-    <li>
-      <strong>7:30 - 8</strong>: Unreleased tracks and demos from 2018 - 2020
-    </li>
-    <li>
-      <strong>8 - ?</strong>: Free play and goofing off
-    </li>
-  </ul>
-{/snippet}
-
 <div class={stack({ gap: 10 })}>
-  {#if data.isListeningPartyDay}
-    <div class={stack({ gap: 4 })}>
-      <h1>Listening party, round 2</h1>
-
-      {#if data.isListeningPartyActive}
-        <p>
-          Come heckle me and some friends as we do our best to entertain you in
-          an interactive audio format.
-        </p>
-        {@render schedule()}
-        <h4>
-          <a
-            href="https://www.listeningroom.club/rooms/005f120274309fa3f90d0dfbcd16a6ef/"
-            target="_blank">Join the Listening party</a
-          >
-        </h4>
-      {:else}
-        <p>
-          I'm hosting an audio broadcast on <strong
-            >Wednesday, May 14th at 7:30pm CST</strong
-          >! <strong>Check back here for a link closer to time.</strong>
-        </p>
-        {@render schedule()}
-        <p>
-          ---<strong>Check this space closer to the time for a link</strong>---
-        </p>
-      {/if}
+  <div class={stack({ gap: 4 })}>
+    <h1>New single (with two songs)</h1>
+    <p>
+      "Magic Machine" and "Who's Left" out now wherever you consume music
+      digitally. Artwork by <a href="http://hrabb.it">Sam Hrabko</a>.
+    </p>
+    <div class={stack({ gap: 4, direction: ['column', 'row'] })}>
+      <div class={stack({ gap: 4, flex: 1 })}>
+        <a href="/music/magic-machine"
+          ><PictureFrame>
+            <enhanced:img
+              src="$lib/assets/releases/magic-machine.png"
+              alt="An illustration of three scientists trying to decipher the paper printout of a large machine, by Sam Hrabko."
+            />
+          </PictureFrame></a
+        >
+        <div class={box({ gap: 1 })}>
+          <ListenLinks
+            spotify="https://open.spotify.com/album/4xAkI14NopNTrCuOwnnYBy"
+            apm="https://music.apple.com/us/album/magic-machine-single/1865788208"
+            bandcamp="https://fullbloods.bandcamp.com/album/magic-machine"
+            tidal="https://tidal.com/album/486280058/u"
+            youtube="https://music.youtube.com/playlist?list=OLAK5uy_lvMLx3cYz2Jo23EjkCaIuoCTD7Ehfiwd4"
+            justify="center"
+          />
+        </div>
+      </div>
     </div>
-    <hr />
-  {/if}
-
+  </div>
+  <hr />
   <div class={stack({ gap: 4 })}>
     <h1>"Playing it Safe" now available</h1>
     <div class={stack({ gap: 4, direction: ['column', 'row'] })}>

@@ -3,6 +3,7 @@ import adapter from '@sveltejs/adapter-netlify'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
+import remarkEmojiMart from './src/lib/remark-emoji-mart.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,7 +14,7 @@ const config = {
     mdsvex({
       extensions: ['.md'],
       smartypants: true,
-      remarkPlugins: [remarkBreaks, remarkGfm],
+      remarkPlugins: [remarkBreaks, remarkGfm, remarkEmojiMart],
     }),
   ],
 

@@ -69,3 +69,4 @@ export type CalendarAttachment = {
   url: string
   srcSet?: string
 }
+

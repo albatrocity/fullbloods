@@ -1,5 +1,14 @@
 import type { Component } from 'svelte'
-import type { PageLoad } from './$types'
+import type { PageLoad, EntryGenerator } from './$types'
+
+export const entries: EntryGenerator = () => {
+  const broadcasts = import.meta.glob('/src/broadcasts/*.md', { eager: true })
+  
+  return Object.keys(broadcasts).map((path) => {
+    const slug = path.replace('/src/broadcasts/', '').replace('.md', '')
+    return { slug }
+  })
+}
 
 export const load: PageLoad = async ({ params }) => {
   const broadcast: { default: Component } = await import(

@@ -9,5 +9,3 @@ export const load: LayoutServerLoad = async ({ fetch }) => {
     events: results,
   }
 }
-
-// export const prerender = true

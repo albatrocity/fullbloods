@@ -15,38 +15,44 @@ export function normalizeIcalDate(date: IcalDate): Date {
   const sourceTz = date.tz ?? TIMEZONE
 
   if (date.dateOnly) {
-    return new TZDate(
-      date.getFullYear(),
-      date.getMonth(),
-      date.getDate(),
-      0,
-      0,
-      0,
-      sourceTz
+    return new Date(
+      new TZDate(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        0,
+        0,
+        0,
+        sourceTz
+      )
     )
   }
 
   if (date.tz) {
-    return new TZDate(
+    return new Date(
+      new TZDate(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+        sourceTz
+      )
+    )
+  }
+
+  // Floating DTSTART: treat wall clock as venue local time.
+  return new Date(
+    new TZDate(
       date.getFullYear(),
       date.getMonth(),
       date.getDate(),
       date.getHours(),
       date.getMinutes(),
       date.getSeconds(),
-      sourceTz
+      TIMEZONE
     )
-  }
-
-  // Floating DTSTART: treat wall clock as venue local time.
-  return new TZDate(
-    date.getFullYear(),
-    date.getMonth(),
-    date.getDate(),
-    date.getHours(),
-    date.getMinutes(),
-    date.getSeconds(),
-    TIMEZONE
   )
 }
 

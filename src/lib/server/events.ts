@@ -1,10 +1,10 @@
 import ical from 'ical'
 import { TZDate } from '@date-fns/tz'
-import { isAfter, isSameDay, isBefore, format } from 'date-fns'
+import { isAfter, isSameDay, isBefore } from 'date-fns'
 
 import { PUBLIC_CAL_URI } from '$env/static/public'
 import type { CalendarEvent, CalendarAttachment } from '$lib/types'
-import { TIMEZONE } from '$lib/events'
+import { TIMEZONE, formatEventDate } from '$lib/events'
 
 type Props = {
   fetch: typeof fetch
@@ -53,7 +53,8 @@ export async function getCalendarEvents({ fetch }: Props) {
     if (data[k]) {
       const ev = data[k]
       if (ev.type == 'VEVENT' && ev.start) {
-        if (isAfter(ev.start, today) || isSameDay(ev.start, today)) {
+        const eventStart = new TZDate(ev.start, TIMEZONE)
+        if (isAfter(eventStart, today) || isSameDay(eventStart, today)) {
           const attachments: CalendarAttachment[] = (
             Array.isArray(ev.attach) ? ev.attach : [ev.attach]
           )
@@ -71,7 +72,7 @@ export async function getCalendarEvents({ fetch }: Props) {
                 srcSet,
               }
             })
-          ev.formatted_start = format(ev.start, 'MMMM d, yyyy @ h:mma')
+          ev.formatted_start = formatEventDate(ev.start, 'MMMM d, yyyy @ h:mma')
 
           events.push({
             summary: ev.summary,

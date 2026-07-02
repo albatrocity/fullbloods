@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { format } from 'date-fns'
   import type { ClassValue } from 'svelte/elements'
+  import { formatEventDate } from '$lib/events'
 
   const { eventDate, styleClass }: { eventDate: Date; styleClass: ClassValue } =
     $props()
 
-  const month = format(new Date(eventDate), 'MMM')
-  const date = format(new Date(eventDate), 'd')
-  const time = format(new Date(eventDate), 'h:mma')
+  const month = formatEventDate(eventDate, 'MMM')
+  const date = formatEventDate(eventDate, 'd')
+  const time = formatEventDate(eventDate, 'h:mma')
 </script>
 
 <time class={styleClass}>

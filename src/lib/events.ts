@@ -4,11 +4,12 @@ import { TZDate } from '@date-fns/tz'
 
 export const TIMEZONE = 'America/Chicago'
 
+export function formatEventDate(date: Date, pattern: string) {
+  return format(new TZDate(date, TIMEZONE), pattern)
+}
+
 export function makeEventSlug(event: CalendarEvent) {
-  const datePrefix = format(
-    new TZDate(new Date(event.start), TIMEZONE),
-    'yyyy-M-d'
-  )
+  const datePrefix = formatEventDate(event.start, 'yyyy-M-d')
   const slug = event.summary
     ? event.summary.replace(/[^a-z0-9]+/gi, '-').toLowerCase()
     : event.uid

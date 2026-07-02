@@ -23,4 +23,6 @@ You can preview the production build with `npm run preview`.
 
 ## Deployment
 
-Deployment is done via Netlify using the SvelteKit adapter. The only page that's SSR is the shows page.
+Deployment is done via Netlify using the SvelteKit adapter. The shows page is prerendered at build time (calendar data is fetched from `PUBLIC_CAL_URI` during `npm run build`).
+
+A scheduled Netlify function (`netlify/functions/scheduled-deploy.ts`) POSTs to `BUILD_HOOK_URL` once daily so show listings stay up to date without per-request server rendering.

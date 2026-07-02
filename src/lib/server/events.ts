@@ -4,7 +4,12 @@ import { isAfter, isSameDay, isBefore } from 'date-fns'
 
 import { PUBLIC_CAL_URI } from '$env/static/public'
 import type { CalendarEvent, CalendarAttachment } from '$lib/types'
-import { TIMEZONE, formatEventDate } from '$lib/events'
+import {
+  TIMEZONE,
+  formatEventDateInTimezone,
+  normalizeIcalDate,
+  type IcalDate,
+} from '$lib/events'
 
 type Props = {
   fetch: typeof fetch
@@ -53,7 +58,8 @@ export async function getCalendarEvents({ fetch }: Props) {
     if (data[k]) {
       const ev = data[k]
       if (ev.type == 'VEVENT' && ev.start) {
-        const eventStart = new TZDate(ev.start, TIMEZONE)
+        const start = normalizeIcalDate(ev.start as IcalDate)
+        const eventStart = new TZDate(start, TIMEZONE)
         if (isAfter(eventStart, today) || isSameDay(eventStart, today)) {
           const attachments: CalendarAttachment[] = (
             Array.isArray(ev.attach) ? ev.attach : [ev.attach]
@@ -72,15 +78,19 @@ export async function getCalendarEvents({ fetch }: Props) {
                 srcSet,
               }
             })
-          ev.formatted_start = formatEventDate(ev.start, 'MMMM d, yyyy @ h:mma')
+          const formatted_start = formatEventDateInTimezone(
+            start,
+            TIMEZONE,
+            'MMMM d, yyyy @ h:mma'
+          )
 
           events.push({
             summary: ev.summary,
             description: ev.description,
             location: ev.location,
-            start: ev.start,
-            formatted_start: ev.formatted_start,
-            end: ev.end,
+            start,
+            formatted_start,
+            end: ev.end ? normalizeIcalDate(ev.end as IcalDate) : undefined,
             url: {
               val: ev.url,
             },
@@ -95,12 +105,7 @@ export async function getCalendarEvents({ fetch }: Props) {
     .filter((ev) => !!ev)
     .sort(function (a, b) {
       if (a.start && b.start)
-        return isBefore(
-          new TZDate(a.start, TIMEZONE),
-          new TZDate(b.start, TIMEZONE)
-        )
-          ? -1
-          : 1
+        return isBefore(a.start, b.start) ? -1 : 1
       return 0
     })
 
